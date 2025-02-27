@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interattivo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #74b9ff, #a29bfe);
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .quiz-container {
+            background: #2d3436;
+            border-radius: 15px;
+            padding: 40px;
+            width: 90%;
+            max-width: 700px;
+            margin: 50px auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+        h2 {
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        .quiz-options button {
+            display: block;
+            width: 100%;
+            margin: 15px 0;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+        .quiz-options button:hover {
+            transform: scale(1.02);
+        }
+        .quiz-options button.correct {
+            background-color: #27ae60;
+            color: white;
+        }
+        .quiz-options button.wrong {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .quiz-options button {
+            background-color: #636e72;
+            color: #fff;
+        }
+        #next-btn {
+            display: none;
+            background-color: #0984e3;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        #next-btn:hover {
+            background-color: #74b9ff;
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2 id="quiz-question"></h2>
+        <div class="quiz-options" id="quiz-options"></div>
+        <button id="next-btn">Avanti</button>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "Quali sono i principali componenti del sistema cardiocircolatorio?",
+                options: ["Il cuore, il sangue e i vasi sanguigni", "I polmoni, il cuore e i reni", "Il midollo osseo, i linfonodi e il fegato."],
+                correct: 0
+            },
+            {
+                question: "Quale funzione hanno i globuli rossi?",
+                options: ["Producono anticorpi per combattere le infezioni", "Trasportano ossigeno ai tessuti e rimuovono l'anidride carbonica", "Fagocitano i batteri e i virus"],
+                correct: 1
+            },
+            {
+                question: "Che cosa è il plasma?",
+                options: ["Un tessuto connettivo liquido che trasporta cellule e sostanze nel sangue", "Un elemento del sistema linfatico", "Un tipo di globulo rosso che fornisce energia alle cellule"],
+                correct: 0
+            },
+            {
+                question: "Quale tra queste affermazioni sul cuore è corretta?",
+                options: ["Pulisce il sangue dai batteri e virus", "È un organo muscolare involontario formato da cartilagine", "E' diviso in quattro camere: due atri e due ventricoli;"],
+                correct: 2
+            },
+            {
+                question: "Le arterie hanno pareti più spesse delle vene perché:",
+                options: ["Contengono più ossigeno delle vene", "Sono le ultime ramificazioni dei capillari", "Devono resistere alla pressione del sangue pompato dal cuore"],
+                correct: 2
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const quizQuestion = document.getElementById("quiz-question");
+        const quizOptions = document.getElementById("quiz-options");
+        const nextButton = document.getElementById("next-btn");
+
+        function loadQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            quizQuestion.textContent = currentQuestion.question;
+            quizOptions.innerHTML = "";
+            
+            currentQuestion.options.forEach((option, index) => {
+                const button = document.createElement("button");
+                button.textContent = option;
+                button.addEventListener("click", () => checkAnswer(index, button));
+                quizOptions.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selectedIndex, button) {
+            const currentQuestion = questions[currentQuestionIndex];
+            const correctIndex = currentQuestion.correct;
+
+            if (selectedIndex === correctIndex) {
+                button.classList.add("correct");
+                score++;
+            } else {
+                button.classList.add("wrong");
+                document.querySelectorAll("#quiz-options button")[correctIndex].classList.add("correct");
+            }
+
+            // Disabilita tutti i pulsanti dopo la selezione
+            document.querySelectorAll("#quiz-options button").forEach(btn => {
+                btn.disabled = true;
+            });
+
+            nextButton.style.display = "block";
+        }
+
+        function showNextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+                nextButton.style.display = "none";
+            } else {
+                quizQuestion.textContent = `Quiz completato! 🎉 Hai totalizzato ${score} su ${questions.length} punti.`;
+                quizOptions.innerHTML = "";
+                nextButton.style.display = "none";
+            }
+        }
+
+        nextButton.addEventListener("click", showNextQuestion);
+
+        // Carica la prima domanda all'inizio
+        loadQuestion();
+    </script>
+</body>
+</html>
+
+

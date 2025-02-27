@@ -1,0 +1,140 @@
+/* Stile generale */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+}
+
+/* Splash Screen */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #4a90e2, #0052cc);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.splash-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.splash-logo {
+    max-width: 80%;
+    height: auto;
+}
+
+.splash-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.splash-content button {
+    background: #fff;
+    color: #4a90e2;
+    padding: 15px 50px;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    margin-top: 60px;
+}
+
+.splash-content button:hover {
+    background: #f0f0f0;
+}
+
+/* Main Layout */
+.layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    border: none;
+    height: 100vh;
+    width: 100%;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+}
+
+.side-bar{
+    background: linear-gradient(to bottom, #4a90e2, #0052cc);
+    width: 350px;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+}
+
+.side-bar .menu{
+    width: 100%;
+    margin-top: 80px;
+}
+
+.side-bar .menu .item{
+    position: relative;
+    cursor: pointer;
+}
+
+.side-bar .menu .item a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 15px 25px;
+}
+
+.side-bar .menu a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    padding: 15px 25px;
+}
+
+.side-bar .menu .item a:hover{
+    background: #575757;
+    transition: 0.3s ease;
+}
+
+.side-bar .menu .item a .dropdown{
+    position: absolute;
+    right: 10px;
+    margin: 0;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+}
+
+.rotate{
+    transform: rotate(90deg);
+}
+
+.side-bar .menu .item .sub-menu{
+    background: #0052cc;
+    display: none;
+}
+
+.side-bar .menu .item .sub-menu a{
+    padding-left: 80px;
+}

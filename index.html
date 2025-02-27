@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Splash Screen -->
+    <div class="splash-screen" id="splash">
+        <div class="splash-content">
+            <h1>IL CORPO UMANO</h1>
+            <img src="logo.png" alt="Logo" class="splash-logo">
+            <button class="enter_btn" id="enter-btn">Inizia</button>
+        </div>
+    </div>
+
+    <!-- Layout principale -->
+    <div class="layout" id="main-layout">
+        <!-- Side Menu -->
+        <div class="side-bar">
+            <div class="menu">
+                <div class="item"><a href="#">MENU</a></div>
+                <div class="item">
+                    <a class="sub-btn">Apparato Circolatorio<i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <a href="Apparato Circolatorio/introduzione1.html" target="content-frame" class="sub-item">Introduzione</a>
+                        <a href="Apparato Circolatorio/sangue.html" target="content-frame" class="sub-item">Il Sangue</a>
+                        <a href="Apparato Circolatorio/vasi_sanguigni.html" target="content-frame" class="sub-item">I Vasi Sanguigni</a>
+                        <a href="Apparato Circolatorio/cuore.html" target="content-frame" class="sub-item">Il Cuore</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="sub-btn">Apparato 2<i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <a href="#" class="sub-item">Argomento 1</a>
+                        <a href="#" class="sub-item">Argomento 2</a>
+                        <a href="#" class="sub-item">Argomento 3</a>
+                    </div>
+                </div>
+                <div class="item"><a href="#">Apparato 3</a></div>
+                <div class="item"><a href="quiz.html" target="content-frame">Quiz</a></div>
+                <div class="item"><a href="#">Crediti</a></div>
+                <div class="item"><a href="#">Aiuto</a></div>
+                <div class="item"><a class="exit-btn" href="#">Esci</a></div>
+            </div>
+        </div>
+
+        <!-- Contenuto principale -->
+        <iframe name="content-frame" class="main-content" src="Apparato Circolatorio/cuore.html"></iframe>
+    </div>
+
+</body>
+</html>

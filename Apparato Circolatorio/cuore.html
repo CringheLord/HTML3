@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Cuore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('sfondo_cuore.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .content{
+            text-align: start;
+            padding: 20px 20px 0px 20px;
+            flex-direction: row;
+            display: flex;
+        }
+        .image{
+            text-align: start;
+            padding: 20px 20px 0px 20px;
+            flex-direction: row;
+            display: flex;
+
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            align-items: center;
+            flex: 50%;
+        }
+        .text{
+            text-align: start;
+            flex-direction: column;
+            display: flex;
+            flex: 50%;
+        }
+        .text p{
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: 1.8rem;
+            color: #333;
+            display: flex;
+        }
+        .image img {
+            max-width: 70%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .buttons {
+            position: fixed;
+            bottom: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #900000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #b00000;
+        }
+        .buttons button:nth-child(1) {
+            transform: translateX(30px);
+        }
+        .buttons button:nth-child(1):hover {
+            transform: translateX(30px) scale(1.05);
+        }
+        .buttons button:nth-child(2) {
+            transform: translateX(-30px);
+        }
+        .buttons button:nth-child(2):hover {
+            transform: translateX(-30px) scale(1.05);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="text">
+            <p>
+                Organo fondamentale che fa circolare il sangue nei vasi. Esso scorre in due direzioni diverse e cioè dal cuore alla periferia nelle
+                arterie e dal cuore alla periferia nelle vene.
+            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>
+                Il cuore è diviso in due parti, destra e sinistra che non possono comunicare fra loro.
+                A destra circola solo sangue venoso ricco di anidride carbonica, a sinistra invece circola sangue arterioso ricco di ossigeno.
+            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>
+                Il cuore dopo che ha ricevuto il sangue da tutto il corpo, per poter spingere il sangue nelle arterie,
+                si deve contrarre continuamente in modo ritmico, senza il bisogno di essere stimolato dalla nostra volontà.
+
+            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>
+                Questo processo si chiama ciclo cardiaco e consiste di due fasi e da una brevissima pausa. 
+                Le due fasi si chiamano diastole (dilatazione) e sistole (contrazione).
+            </p>
+        </div>
+        <br>
+        <div class="image">
+            <img src="cuore2.jpg" alt="immagine sangue" class="sangue-image">
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="button" onclick="location.href='vasi_sanguigni.html';" target="content-frame">Indietro</button>
+        <button class="button" onclick="location.href='cuore.html';" target="content-frame">Avanti</button>
+    </div>
+    
+</body>
+</html>

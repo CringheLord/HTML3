@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Vasi Sanguigni</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('sfondo_cuore.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .content {
+            text-align: start;
+            padding: 20px 20px 0px 20px;
+            flex-direction: column;
+        }
+        .img_content{
+            text-align: start;
+            padding: 20px 20px 0px 20px;
+            flex-direction: row;
+            display: flex;
+        }
+        .text_content {
+            text-align: start;
+            flex-direction: column;
+            display: flex;
+            flex: 60%;
+        }
+        .text_content p{
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: 1.8rem;
+            color: #333;
+            display: flex;
+        }
+        .img_content .image-row {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+            flex: 40%;
+        }
+        .img_content .image-row img {
+            max-width: 65%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .text_content2 {
+            text-align: start;
+            flex-direction: row;
+            display: flex;
+        }
+        .text_content2 p{
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: 1.8rem;
+            color: #333;
+            display: flex;
+        }
+        .text_content2 .text1{
+            padding: 20px 20px 0px 20px;
+        }
+        .text_content2 .text2{
+            padding: 20px 20px 0px 20px;
+        }
+        .buttons {
+            position: fixed;
+            bottom: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #900000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #b00000;
+        }
+        .buttons button:nth-child(1) {
+            transform: translateX(30px);
+        }
+        .buttons button:nth-child(1):hover {
+            transform: translateX(30px) scale(1.05);
+        }
+        .buttons button:nth-child(2) {
+            transform: translateX(-30px);
+        }
+        .buttons button:nth-child(2):hover {
+            transform: translateX(-30px) scale(1.05);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="img_content">
+            <div class="text_content">
+                <p>
+                    Il sistema vascolare è l'insieme di condutture, o vasi, in cui circola il sangue: in esso si distinguono tre tipi di vasi sanguigni e cioè le arterie, 
+                    le vene e i capillari.
+    
+                </p>
+                <br>
+                <br>
+                <br>
+                <p>
+                    <b>Le Arterie</b>
+                </p>
+                <br>
+                <p>
+                    Le arterie sono i vasi che escono dal cuore e trasportano il sangue ricco di ossigeno verso la periferia del corpo.
+                    Le pareti delle arterie devono essere robuste ed elastiche perchè devono resistere alla forte pressione esercitata dal sangue al passaggio in esse.
+    
+                </p>
+                <br>
+            </div>
+            <div class="image-row">
+                <img src="vasi_sanguigni.jpg" alt="immagine sangue" class="sangue-image">
+            </div>
+        </div>
+        <br>
+        <div class="text_content2">
+            <div class="text1">
+                <p>
+                    <b>Le vene</b>
+                </p>
+                <br>
+                <p>
+                    Le vene entrano nel cuore e trasportano il sangue con poco ossigeno proveniente dalla periferia del corpo.
+                    Hanno pareti più sottili delle arterie e sono dotate di valvole (a nido di rondine) che impediscono il reflusso del sangue.
+                </p>
+            </div>
+            <div class="text2">
+                <p>
+                    <b>I Capillari</b>
+                </p>
+                <br>
+                <p>
+                    Le vene entrano nel cuore e trasportano il sangue con poco ossigeno proveniente dalla periferia del corpo.
+                    Hanno pareti più sottili delle arterie e sono dotate di valvole (a nido di rondine) che impediscono il reflusso del sangue.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="button" onclick="location.href='sangue.html';" target="content-frame">Indietro</button>
+        <button class="button" onclick="location.href='cuore.html';" target="content-frame">Avanti</button>
+    </div>
+    
+</body>
+</html>
