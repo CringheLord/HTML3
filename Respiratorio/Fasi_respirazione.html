@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respirazione</title>
+    <style>
+        body {
+            background: radial-gradient(circle, rgb(151, 150, 150), #141E30);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: justify;
+            position: relative; /* Necessario per il posizionamento assoluto dei tasti */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .highlight-green { color: rgb(42, 189, 42); text-decoration: none; }
+        .highlight-red { color: red; text-decoration: none; }
+        .highlight-pink { color: #FF00FF; text-decoration: none; }
+        .highlight-orange { color: orange; text-decoration: none; }
+        .highlight-blue { color: lightblue; text-decoration: none; }
+        .highlight-yellow { color: yellow; text-decoration: none; }
+        .image-container {
+            text-align: center;
+        }
+        img {
+            width: 35%;
+            height: auto;
+        }
+        .buttons {
+            position: fixed;
+            bottom: 20px;
+            width: 96%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background-color: #900000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #b00000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>L’aria che respiriamo, quindi, giunge fino ai <span class="highlight-red">polmoni</span>, due organi elastici e spugnosi che però <u>non sono in grado di contrarsi da soli</u> perché non presentano fibre muscolari. 
+           Sono racchiusi nella <b>cavità toracica</b>, della quale assumono la forma e sono separati dalla cavità addominale attraverso il <span class="highlight-blue">diaframma</span>.</p>
+        <br>
+
+        <p>Il <span class="highlight-blue">diaframma</span> è un muscolo orizzontale situato alla base dei polmoni che separa il torace dall’addome. 
+            Quando il diaframma si abbassa, il torace si espande e l’aria entra, questa fase è detta  <span class="highlight-blue">inspirazione</span>. 
+            Quando il diaframma s’innalza, il torace si contrae e l’aria esce, l'<span class="highlight-blue">espirazione</span>.</p>
+        <br><br>
+
+        <div class="image-container">
+            <img src="In-espirazione.png" alt="Schema fasi_respirazione">
+            <img src="Diaframma.png" alt="Schema Diaframma">
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="button" onclick="location.href='Albero_bronchiale.html';">Indietro</button>
+        <button class="button" onclick="location.href='Introduzione.html';">Avanti</button>
+    </div>
+</body>
+</html>
+

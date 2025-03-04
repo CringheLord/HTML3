@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Respirazione</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: radial-gradient(circle, rgb(151, 150, 150), #141E30);
+            background-size: 100% auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .text {
+            font-size: 1.5rem;
+            max-width: 70%;
+            margin-bottom: 20px;
+        }
+        .division-text {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 60%;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+        }
+        .label {
+            position: absolute;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .buttons {
+            position: fixed;
+            bottom: 20px;
+            width: 97%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background-color: #900000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #b00000;
+            transform: scale(1.05);
+        }
+        .red-text {
+            color: red;
+            font-weight: bold;
+        }
+        .blue-text {
+            color: lightblue;
+            font-weight: bold;
+        }
+        .purple-text {
+            color: purple;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="text">
+        <strong class="blue-text">LA RESPIRAZIONE</strong><br><br>
+        La respirazione è la funzione che serve a far entrare nel nostro corpo 
+        l’ossigeno necessario alle cellule per poter demolire le sostanze nutritive 
+        e per ricavarne energia indispensabile per vivere.
+    </div>
+
+    <div class="division-text">
+        Le fasi della respirazione sono tre:
+    </div>
+
+    <div class="text" style="font-size: 1.2rem;">
+        <ul style="list-style-type: none; padding: 0;">
+            <li>
+                <span class="red-text">La respirazione esterna o polmonare:</span> 
+                Regola l’entrata e l’uscita dell’aria nel nostro corpo grazie 
+                all’inspirazione e all’espirazione.
+            </li>
+            <br>
+            <li>
+                <span class="blue-text">Lo scambio di gas:</span> 
+                L’ossigeno, una volta arrivato nei polmoni, viene prelevato dai 
+                globuli rossi del sangue e portato in tutto il corpo. 
+                L’anidride carbonica, invece, passa dalle cellule al sangue e 
+                dal sangue ai polmoni per poi essere espulsa.
+            </li>
+            <br>
+            <li>
+                <span class="purple-text">La respirazione interna o cellulare:</span> 
+                Avviene all’interno delle cellule e, grazie all’ossigeno, 
+                permette di ricavare dal cibo l’energia necessaria per vivere.
+            </li>
+        </ul>
+    </div>
+
+    <div class="image-container">
+        <img src="Respirazione.png" alt="Schema della Respirazione">
+    </div>
+
+    <div class="division-text">
+        Seguiamo ora l’aria che respiriamo nel suo percorso verso i polmoni
+    </div>
+
+    <div class="buttons">
+        <button class="button" onclick="location.href='Introduzione.html';">Indietro</button>
+        <button class="button" onclick="location.href='Apparato_respiratorio.html';">Avanti</button>
+    </div>
+
+</body>
+</html>
