@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apparato Respiratorio</title>
+    <style>
+        body {
+            background: radial-gradient(circle, rgb(151, 150, 150), #141E30);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: justify;
+            position: relative; /* Necessario per il posizionamento assoluto dei tasti */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .highlight-red { color: red; text-decoration: none; }
+        .highlight-pink { color: #FF00FF; text-decoration: none; }
+        .highlight-orange { color: orange; text-decoration: none; }
+        .highlight-blue { color: lightblue; text-decoration: none; }
+        .highlight-yellow { color: yellow; text-decoration: none; }
+        .image-container {
+            text-align: center;
+        }
+        img {
+            width: 35%;
+            height: auto;
+        }
+        .buttons {
+            position: fixed;
+            bottom: 20px;
+            width: 96%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background-color: #900000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #b00000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Giunta nel <span class="highlight-red">naso</span> grazie ai <b>peli nasali</b> e al <b>muco</b> prodotto dalle cellule mucipare, l’aria viene filtrata e quindi purificata dalle impurità come il pulviscolo atmosferico,
+           inoltre viene riscaldata e resa umida. Il naso è una prima protezione a tutto il sistema respiratorio, cosa che non avviene se l’aria entra dalla bocca.</p>
+           <br>
+
+        <p>L’aria arriva poi alla <span class="highlight-blue">faringe</span>, che è collegata con il <span class="highlight-red">naso</span> e con la <span class="highlight-pink">bocca</span>.
+           La <span class="highlight-blue">faringe</span> è un organo sia dell’<u>apparato digerente</u> che <u>respiratorio</u>, quindi attraverso esso passerà sia il cibo che l’aria. Quindi possiede una valvola,
+           chiamata <b>epiglottide</b>, che chiude l’apertura della <span class="highlight-orange">laringe</span> quando ingeriamo il cibo e invece  aperta quando inspiriamo.</p>
+           <br> 
+
+        <p>L’aria passa poi alla <span class="highlight-orange">laringe</span>, un organo a forma d’imbuto rovesciato.
+           Essa serve anche per la fonazione, cioè per emettere suoni. 
+           Infatti, all’interno della laringe sono presenti le corde vocali.</p>
+        <br><br><br><br>
+        <div class="image-container">
+            <img src="Apparato_respiratorio.png" alt="Schema Apparato_respiratorio">
+        </div>
+    </div>
+    
+    <div class="buttons">
+        <button class="button" onclick="location.href='Respirazione.html';">Indietro</button>
+        <button class="button" onclick="location.href='Albero_bronchiale.html';">Avanti</button>
+    </div>
+</body>
+</html>
+
+
