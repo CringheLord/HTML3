@@ -185,17 +185,6 @@ p {
     position: relative;
 }
 
-.List li::after {
-    content: "";
-    position: absolute;
-    top: 50%;                 /* Centra verticalmente la linea rispetto al <li> */
-    right: -20%;                 /* La linea parte dal bordo destro del <li> */
-    transform: translateY(-50%); /* Per centrare esattamente */
-    width: 500px;              /* Lunghezza della linea; modifica questo valore per adattarlo alla distanza fino alla freccia */
-    height: 3px;              /* Spessore della linea */
-    background-color: currentColor;  /* Usa lo stesso colore del testo dell'elemento */
-  }
-
 /*FRECCE*/
 #arrow1, #arrow2, #arrow3, #arrow4 {
     transform-origin: center;
