@@ -6,35 +6,74 @@
     <title>La Bocca e...</title>
     <link rel="stylesheet" href="style_Dige.css">
     <style>
+
+        #slide3_container{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            
+        }
+    #title{
+        transform: translate(27%, 7%);
+    }
         
+
+        #text3_container{
+            display: flex;
+            flex-direction: row;
+            
+        }
 
 
         #cloud{
-            flex: 1;
-            text-align: justify;
+
+            text-align: center;
             background-color: #f0ffff;
             border: 3px solid #4f81bd;
-            height: 220px;
-            width: 480px;
-            border-radius: 100%;
             padding: 30px;
+            text-align: center;
+            transform: translate(35%, 0%);
+
+            border-radius: 100%;
+            height: 60%;
+            width: 30%;
         }
 
         #text{
             
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: rgb(59, 184, 150);
         }
 
-        #dentino{
-            width: 100%;       
-            min-width: 90%;
+        #dentino{                   
+            min-width: 30%;
+            transform: translate(-40px, 80px);
         }
 
         #dentino img {
-            width: 50%;
+            width: 30%;
             height: auto;
-            border-radius: 10px; 
+        }
+
+        #image1_container{
+            min-width: 40%;
+            transform: translate(-195px, -50px);
+        }
+
+        #image1_container img{
+            width: 45%;
+            height: auto;
+        }
+
+        #image2_container{
+            min-width: 100%;            
+            align-self: center;
+            transform: translate( 0, -30px);
+        }
+
+        #image2_container img{
+            width: 55%;
+            height: auto;
         }
 
 
@@ -49,10 +88,10 @@
 
 
         #arrow1{
-            position: relative;
             bottom: 160px;
             left: 240px;
-            transform: rotate(-25deg);
+            
+            transform: translate( 167px, 95px) rotate(30deg);
         }
 
 
@@ -61,18 +100,32 @@
 </head>
 <body class="body_Slide">
 
-    <div class="slide_container">
+    <div id="slide3_container">
 
-        <h3 style="color: rgb(47, 139, 192);">La Bocca e la Cavità Orale</h3>
+        <h3 id="title" style="color: #2f8bc0;">La Bocca e la Cavità Orale</h3>
 
-        <div id="cloud">
-            <p id="text">La <bold><u>digestione</u></bold> inizia nella bocca, dove i denti masticano cibo e saliva, prodotta dalle ghiandole salivari
-                Inizia la digestione chimica degli amidi.
-            </p>
-            <div id="dentino">
-                <img src="image2_3.png" alt="Dentinooo il nosto amico dente">
+        <div id="text3_container">
+            <div id="cloud">
+                <p id="text">La <bold><u>digestione</u></bold> inizia nella bocca, dove i denti masticano cibo e saliva, prodotta dalle ghiandole salivari
+                    Inizia la digestione chimica degli amidi.
+                </p>    
             </div>
 
+            <svg class="arrow" id="arrow1" width="45" height="45" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="10,5 40,25 10,45" fill="#2f8bc0"/>
+            </svg>
+
+            <div id="dentino">
+                <img src="image3_3.png" alt="Dentinooo il nosto amico dente">
+            </div>
+
+            <div id="image1_container">
+                <img src="image3_1.png">
+            </div>
+        </div>
+
+        <div id="image2_container">
+            <img src="image3_2.png">
         </div>
 
     </div>
@@ -95,7 +148,7 @@
         <button class="button" onclick="location.href='slide_2.html';">
             Indietro
         </button>
-        <button class="button" onclick="location.href='slide_3.html';">
+        <button class="button" onclick="location.href='slide_4.html';">
             Avanti
         </button>
     </div>
