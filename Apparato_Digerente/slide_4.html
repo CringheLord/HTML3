@@ -10,8 +10,8 @@
         #slide4_container{
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-        
+            justify-content: space-around;            
+            align-items: center;
         }
 
         #text_container{
@@ -19,6 +19,8 @@
             flex-direction: column;
             align-items: center;
             justify-content:space-evenly left;
+            gap: 15px;
+            transform: translateY(-40px);
         }
 
         #title{
@@ -26,24 +28,23 @@
         }
 
         #text1, #text2 {
-            max-width: 500px;
+            max-width: 490px;
             row-gap: 4px;
+            font-size: 1.5rem;
         }
 
         bold {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             text-shadow: black 1px 1px 1px;
         }
 
 
         #image_container{
-            transform: translateX(100px);
-            font-size: 1.6rem;
-            
+            transform: translateX(100px);            
         }
 
         #image_container img {
-            max-width: 500px;
+            max-width: 550px;
             height: auto;
             border: 2px solid rgb(0, 112, 192);
         }
@@ -86,7 +87,7 @@
         <button class="button" onclick="location.href='slide_3.html';">
             Indietro
         </button>
-        <button class="button" onclick="location.href='slide_4.html';">
+        <button class="button" onclick="location.href='slide_5.html';">
             Avanti
         </button>
     </div>
