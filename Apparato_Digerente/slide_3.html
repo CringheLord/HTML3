@@ -7,13 +7,130 @@
     <link rel="stylesheet" href="style_Dige.css">
     <style>
 
+        #slide3_container{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            
+        }
+    #title{
+        transform: translate(27%, 35px);
+    }
+        
 
+        #text3_container{
+            display: flex;
+            flex-direction: row;
+            
+        }
+
+
+        #cloud{
+
+            text-align: center;
+            background-color: #f0ffff;
+            border: 3px solid #4f81bd;
+            padding: 30px;
+            text-align: center;
+            transform: translate(35%, 0%);
+            
+            border-radius: 100%;
+            height: fit-content;
+            width: fit-content;
+        }
+
+        #text{
+            
+            font-size: 1.1rem;
+            color: rgb(59, 184, 150);
+        }
+
+        #dentino{                   
+            min-width: 30%;
+            transform: translate(-40px, 80px);
+        }
+
+        #dentino img {
+            width: 30%;
+            height: auto;
+        }
+
+        #image1_container{
+            min-width: 40%;
+            transform: translate(-100px, -50px);
+        }
+
+        #image1_container img{
+            width: 45%;
+            height: auto;
+        }
+
+        #image2_container{
+            min-width: 100%;            
+            align-self: center;
+            transform: translate( 0, -35px);
+        }
+
+        #image2_container img{
+            width: 55%;
+            height: auto;
+        }
+
+
+
+
+
+
+
+        #arrow1{
+            transform-origin: center;
+        }
+
+
+        #arrow1{
+            bottom: 160px;
+            left: 240px;
+            
+            transform: translate( 167px, 95px) rotate(30deg);
+        }
 
 
     </style>
 
 </head>
 <body class="body_Slide">
+
+    <div id="slide3_container">
+
+        <h3 id="title" style="color: #2f8bc0;">La Bocca e la Cavità Orale</h3>
+
+        <div id="text3_container">
+            <div id="cloud">
+                <p id="text">La <bold><u>digestione</u></bold> inizia nella bocca, dove i denti masticano cibo e saliva, prodotta dalle ghiandole salivari
+                    Inizia la digestione chimica degli amidi.
+                </p>    
+            </div>
+
+            <svg class="arrow" id="arrow1" width="45" height="45" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="10,5 40,25 10,45" fill="#2f8bc0"/>
+            </svg>
+
+            <div id="dentino">
+                <img src="image3_3.png" alt="Dentinooo il nosto amico dente">
+            </div>
+
+            <div id="image1_container">
+                <img src="image3_1.png">
+            </div>
+        </div>
+
+        <div id="image2_container">
+            <img src="image3_2.png">
+        </div>
+
+    </div>
+
+
 
 
 
@@ -31,7 +148,7 @@
         <button class="button" onclick="location.href='slide_2.html';">
             Indietro
         </button>
-        <button class="button" onclick="location.href='slide_3.html';">
+        <button class="button" onclick="location.href='slide_4.html';">
             Avanti
         </button>
     </div>
