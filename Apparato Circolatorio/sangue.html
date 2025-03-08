@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../slide_Dim.css">
     <title>Il Sangue</title>
     <style>
         body {
@@ -17,22 +18,22 @@
             align-items: center;
             justify-content: flex-start;
         }
-        .content {
+        #content {
             text-align: start;
             padding: 20px 20px 0px 20px;
         }
-        .content p {
+        #content p {
             margin-bottom: 0px;
             margin-top: 0px;
             font-size: 2.5rem;
             color: #333;
         }
-        .content ul {
+        #content ul {
             margin-top: 0px;
             font-size: 2rem;
             color: #333;
         }
-        .content .image-row {
+        #content .image-row {
             display: flex;
             justify-content: center;
             margin-top: 10px;
@@ -40,29 +41,29 @@
             align-items: center;
             flex-direction: column;
         }
-        .content .image-row img {
+        #content .image-row img {
             max-width: 40%;
             height: auto;
             border-radius: 8px;
         }
-        .content .text-row {
+        #content .text-row {
             display: flex;
             justify-content: center;
             gap: 40px;
             align-items:flex-start;
         }
-        .content .text-row p {
+        #content .text-row p {
             font-size: 1rem;
             font-weight: bold;
             color: #333;
         }
-        .content .text-row p:nth-child(1) {
+        #content .text-row p:nth-child(1) {
             transform: translateY(-40px) translateX(-50px);
         }
-        .content .text-row p:nth-child(2) {
+        #content .text-row p:nth-child(2) {
             transform: translateY(-40px) translateX(-50px);
         }
-        .content .text-row p:nth-child(3) {
+        #content .text-row p:nth-child(3) {
             transform: translateY(-40px) translateX(-50px);
         }
         .buttons {
@@ -104,7 +105,7 @@
     </style>
 </head>
 <body>
-    <div class="content">
+    <div id="content" class="slide_container_Dim">
         <p>
             Il sangue è un tessuto connettivo liquido che circola nel nostro corpo attraverso i vasi sanguigni. 
             E' formato per il circa 55% da una parte liquida chiamata plasma (liquido giallo paglierino formato soprattutto da acqua e sostanze nutritive)

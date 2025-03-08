@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../slide_Dim.css">
     <title>Introduzione</title>
     <style>
         body {
@@ -17,51 +18,51 @@
             align-items: center;
             justify-content: flex-start;
         }
-        .content {
+        #content {
             text-align: start;
             padding: 20px 20px 0px 20px;
         }
-        .content p {
+        #content p {
             margin-top: 0px;
             font-size: 40px;
             color: #333;
         }
-        .content .image-row {
+        #content .image-row {
             display: flex;
             justify-content: center;
             gap: 280px;
             margin-top: 80px;
             align-items: flex-end;
         }
-        .content .image-row img {
+        #content .image-row img {
             max-width: 40%;
             height: auto;
             border-radius: 8px;
         }
-        .content .image-row img:nth-child(1) {
+        #content .image-row img:nth-child(1) {
             transform: translateY(50px);
         }
-        .content .image-row img:nth-child(2) {
+        #content .image-row img:nth-child(2) {
             transform: translateY(80px) translateX(-50px);
         }
-        .content .image-row img:nth-child(3) {
+        #content .image-row img:nth-child(3) {
             transform: translateY(10px);
         }
-        .content .text-row {
+        #content .text-row {
             display: flex;
             justify-content: center;
             gap: 280px;
             margin-top: 80px;
             align-items: flex-end;
         }
-        .content .text-row p {
+        #content .text-row p {
             font-size: 35px;
             color: #333;
         }
-        .content .text-row p:nth-child(1) {
+        #content .text-row p:nth-child(1) {
             transform: translateY(-85px) translateX(30px);
         }
-        .content .text-row p:nth-child(3) {
+        #content .text-row p:nth-child(3) {
             transform: translateY(-78px) translateX(30px);
         }
         .buttons {
@@ -103,7 +104,7 @@
     </style>
 </head>
 <body>
-    <div class="content">
+    <div id="content" class="slide_container_Dim">
         <p>
             Per funzionare ogni macchina, e quindi anche l'uomo, ha bisogno di carburante da cui riceve energia e ha bisogno di eliminare le sostanze di scarto. 
             Ovviamente anche tutte le cellule del nostro organismo hanno bisogno di sostanze nutritive ed ossigeno e devono eliminare le sostanze di rifiuto. 
@@ -123,10 +124,12 @@
             <p>I Vasi Sanguigni</p>
             <p>Il Cuore</p>
         </div>
-        <div class="buttons">
-            <button class="button" onclick="location.href='introduzione1.html';" target="content-frame">Indietro</button>
-            <button class="button" onclick="location.href='sangue.html';" target="content-frame">Avanti</button>
-        </div>
     </div>
+
+    <div class="buttons">
+        <button class="button" onclick="location.href='introduzione1.html';" target="content-frame">Indietro</button>
+        <button class="button" onclick="location.href='sangue.html';" target="content-frame">Avanti</button>
+    </div>
+
 </body>
 </html>
