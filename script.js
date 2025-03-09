@@ -40,3 +40,25 @@ $(document).ready(function(){
     });
  
 });
+
+/* 
+<script src="script.js"></script>   Dentro le slide o pagine con suoni
+
+// Function to play sound
+function playSound(soundFile) {
+    let audio = new Audio(soundFile);
+    audio.play();
+}
+
+
+modifiche bottoni:
+
+<button class="button" onclick="playSound('click-sound.mp3'); location.href='slide_5.html';">
+    Indietro
+</button>
+<button class="button" onclick="playSound('click-sound.mp3'); location.href='slide_7.html';">
+    Avanti
+</button>
+
+
+*/
