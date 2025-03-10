@@ -9,8 +9,7 @@
 
 /* Sfondo Slide */
 .body_Slide {
-    width: 100vw;
-    height: 100vh;
+
     overflow: hidden;
     background-image: url(SfondoSlide.png);
     background-repeat: no-repeat;

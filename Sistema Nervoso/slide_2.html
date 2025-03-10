@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../slide_Dim.css">
+    <link rel="stylesheet" href="styleNerv.css">
+    <title>Sistema Nervoso</title>
+    <style>
+
+        #slide2_container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #text {
+            font-size: 1.5rem;
+            text-align: center;
+            align-self: center;
+            width: fit-content;
+            margin-bottom: 10px;
+        }
+        #division-text {
+            background-color: rgba(240, 248, 255, 0.199);
+            border: 4px solid rgb(5, 10, 77);
+            padding: 0.3%;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        #image-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            position: relative;
+            width: 60vw;
+        }
+        #image-container img {
+            width: 300px;
+            height: auto;
+        }
+        .label {
+            position: absolute;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .snc {
+            background-color: rgba(161, 17, 180, 0.514);
+            border: 4px dotted rgb(5, 10, 77);
+            padding: 4%;
+            color: rgb(253, 27, 253);
+            left: 5%;
+            top: 50%;
+            text-align: center;
+            font-size: larger;
+        }
+        .snp {
+            background-color: rgba(62, 172, 236, 0.452);
+            border: 4px dotted rgb(5, 10, 77);
+            padding: 4%;
+            color: blue;
+            right: 5%;
+            top: 50%;
+            text-align: center;
+            font-size: larger;
+        }
+
+    </style>
+</head>
+<body class="body_Slide">
+
+    <div class="slide_container_Dim" id="slide2_container">
+
+        <div id="text">
+            <p>
+                Questo sistema elabora risposte, a volte in maniera automatica, a volte con l’intervento della nostra volontà.<br>
+                Esso si occupa anche del coordinamento delle azioni, che avvengono all’interno del nostro organismo,<br>
+                come dormire o svegliarsi, respirare, parlare ecc.<br>
+                Questo perché esso coordina gli organi e ne regola l’attività sensoriale e motoria.
+            </p>
+        </div>
+
+        <div id="division-text">
+            <p>
+                Per poterlo descrivere meglio lo dobbiamo dividere in due parti:
+            </p>
+        </div>
+        
+        <div id="image-container">
+            <div class="label snc">il sistema nervoso centrale<br>SNC</div>
+            <img src="Immagine1.png" alt="Sistema Nervoso">
+            <div class="label snp">sistema nervoso periferico<br>SNP</div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+        <button class="button" onclick="location.href='introduzione.html';" target="content-frame">
+            Indietro
+        </button>
+        <button class="button" onclick="location.href='slide_3.html';" target="content-frame">
+            Avanti
+        </button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../slide_Dim.css">
+    <title>L'Encefalo</title>
+    <style>
+        body {
+            background: radial-gradient(circle, #4A90E2, #141E30);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: justify;
+            position: relative; /* Necessario per il posizionamento assoluto dei tasti */
+        }
+        #container {
+            width: 80%;
+            margin: auto;
+        }
+        h1 {
+            color: red;
+        }
+        .highlight-pink { color: #FF00FF; text-decoration: none; }
+        .highlight-orange { color: orange; text-decoration: none; }
+        .highlight-blue { color: lightblue; text-decoration: none; }
+        .highlight-yellow { color: yellow; text-decoration: none; }
+        .image-container {
+            text-align: center;
+        }
+        img {
+            width: 35%;
+            height: auto;
+        }
+        .buttons {
+            position: fixed;
+            bottom: 20px;
+            width: 96%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background-color: #900000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #b00000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="container" class="slide_container_Dim">
+        <h1>L'ENCEFALO</h1>
+        <p>L’encefalo è la parte più complessa del sistema nervoso e comprende:
+           <span class="highlight-pink">il cervello</span>, 
+           <span class="highlight-orange">il cervelletto</span> e 
+           <span class="highlight-blue">il midollo allungato</span>.</p>
+        
+        <p>• <span class="highlight-pink">Il cervello</span> è la parte più importante e volumosa dell’encefalo, è posto all’interno della <b>scatola cranica</b>, dove è avvolto dalle meningi. La sua superficie esterna è detta <b>corteccia cerebrale</b>, formata da miliardi di cellule nervose e da sostanza grigia.</p>
+        <p>All’interno del cervello si trova la sostanza bianca e contiene il <b>talamo</b> e l’<b>ipotalamo</b>.</p>
+        <p>Il <b>talamo</b> rielabora e smista verso aree specifiche della corteccia cerebrale gli stimoli provenienti dagli organi di senso.</p>
+        <p>L’<b>ipotalamo</b> è posto sotto il talamo e regola gli stimoli provenienti dall’interno del corpo come la fame, la sete, il sonno ecc..</p>
+        
+        <p>• <span class="highlight-blue">Il midollo allungato</span> è una formazione nervosa che congiunge il cervello con il midollo spinale ed è collegato anche con il cervelletto. Contiene i centri di controllo dei movimenti involontari essenziali per la vita come il battito cardiaco, la respirazione, la secrezione di saliva ecc.</p>
+        
+        <p>• <span class="highlight-orange">Il cervelletto</span> è collocato nella parte posteriore della scatola cranica: esso coordina e controlla i movimenti volontari, l’equilibrio del corpo e la posizione eretta.</p>
+        
+        <div class="image-container">
+            <img src="encefalo.png" alt="Schema encefalo">
+        </div>
+    </div>
+    
+    <div class="buttons">
+        <button class="button" onclick="location.href='slide_3.html';">Indietro</button>
+        <button class="button" onclick="location.href='slide_5.html';">Avanti</button>
+    </div>
+</body>
+</html>
+
+
