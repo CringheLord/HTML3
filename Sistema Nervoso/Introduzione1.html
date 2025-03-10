@@ -7,70 +7,49 @@
     <title>Introduzione</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Urbanist, sans-serif;
             margin: 0;
             padding: 0;
             height: 100vh;
-            background: url('sfondo_introduzione.png') no-repeat center center fixed;
+            background: url('sfondo_introduzione.png') no-repeat center fixed;
             background-size: cover;
+        }
+
+        #slide_container{
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
+            justify-content: space-around;
         }
-        .title {
+
+        #title {
             font-size: 3.5rem;
             font-weight: bold;
             color: white;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            padding: 20px;
         }
-        .text {
+        #text {
             font-size: 1.5rem;
             font-weight: bold;
             color: white;
-            background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
-            border-radius: 10px;
             max-width: 80%;
         }
-        .buttons {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-        }
-        .button {
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
-            background-color: #900000;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s, transform 0.2s;
-        }
-        .button:hover {
-            background-color: #b00000;
-            transform: scale(1.05);
-        }
+
     </style>
 </head>
 <body>
 
-    <div class="slide_container_Dim">
+    <div class="slide_container_Dim" id="slide_container">
 
-        <div class="title">
-            Il Sistema Nervoso
+        <div id="title">
+            <h3>Il Sistema Nervoso</h3>
         </div>
-        <div class="text">
-            Il sistema nervoso è la nostra centrale di controllo: raccoglie le informazioni provenienti da tutto il corpo, 
-            le integra ed elabora, per restituire una risposta o un comando adeguato.
+        <div id="text">
+            <p>
+                Il <bold style="color: #900000;">sistema nervoso</bold> è la nostra centrale di controllo: raccoglie le informazioni provenienti da tutto il corpo, 
+                le integra ed elabora, per restituire una risposta o un comando adeguato.
+            </p>
         </div>
 
     </div>
