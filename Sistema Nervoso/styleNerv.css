@@ -52,7 +52,11 @@ p {
 }
 
 bold{
-    text-shadow: 2px 1px 2px currentColor rgb(112, 112, 112);
+    text-shadow: 2px 1px 2px currentColor rgb(7, 7, 7);
+    font-size: larger;
+}
+strong{
+    text-shadow: 2px 1px 2px currentColor rgb(7, 7, 7);
     font-size: larger;
 }
 
