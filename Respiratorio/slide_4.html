@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../slide_Dim.css">
+    <link rel="stylesheet" href="styleResp.css">
+    <title>Albero Bronchiale</title>
+    <style>
+
+        #slide5_container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 90vw;
+        }
+        #row1 {
+            display: flex;
+            flex-direction: row;
+            width: 90vw;
+            height: 55vh;
+        }
+        #text {
+            padding: 3%;
+            display: flex;
+            flex-direction: column;
+            width: 60vw;
+            height: 50vh;
+        }
+        #text p {
+            font-size: 1.6rem;
+            row-gap: 5%;
+        }
+        #cloud {
+            display: flex;
+            flex-direction: row;
+            width: 90vw;
+            height: 35vh;
+        }
+        #cloud_text {
+            border: 6px solid rgb(32, 56, 100);;
+            background-color: rgba(240, 248, 255, 0.815);
+            border-radius: 60%;
+            width: 70vw;
+            height: 35vh;
+            padding: 6%;
+        }
+        #polmons {
+            width: 20vw;
+        }
+        #attenzione {
+            border: 6px double black ;
+            background-color: rgb(196, 19, 19);
+            text-align: center;
+            width: 10vw;
+            height: fit-content;
+            padding: 1%;
+            transform: translate(180%, 60%);
+        }
+        #attenzione p {
+            color: azure;
+        }
+
+        #image-container {
+            text-align: center;
+        }
+        img {
+            width: 28vw;
+            height: auto;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+<body class="body_Slide">
+    <div id="slide5_container" class="slide_container_Dim">
+
+        <div id="row1">
+            <div id="text">
+                <p>Alla laringe segue la <span id="highlight-pink">trachea</span> un tubo flessibile, lungo 10-15 cm. E’ costituita da una ventina di anelli cartilaginei, ed è rivestita da ciglia e da cellule che producono muco.
+                    Il movimento delle ciglia favorisce l’eliminazione delle impurità dell’aria inspirata.
+                </p>
+                <br>
+        
+                <p>La trachea nella sua parte finale si biforca in due grossi rami chiamati <span id="highlight-green">bronchi</span>, uno destro e uno sinistro, che a loro volta si dividono in canali più piccoli (<span id="highlight-green">bronchioli</span>) che penetrano nei polmoni. 
+                    L’insieme delle ramificazioni si chiama <b>albero bronchiale</b>.
+                </p>                        
+                <br>
+                <div id="attenzione">
+                    <p>
+                        ATTENTO!!
+                    </p>
+                </div>
+            </div>
+
+            <div id="image-container">
+                <img src="Albero_bronchiale.png" alt="Schema Albero_bronchiale">
+            </div>
+        </div>
+
+
+        <div id="cloud">
+            <img id="polmons" src="polmon.png" alt="Fratelli Polmo-NINI">
+            <p id="cloud_text">Gli <b style="color: rgb(32, 56, 100);">alveoli polmonari</b> sono piccole sacche d'aria situate alla fine dei bronchioli nei polmoni, e rappresentano la parte finale del sistema respiratorio. 
+                La loro funzione principale è lo <b>scambio gassoso</b> tra l'aria e il sangue grazie alle loro <u>pareti sottilissime</u>.
+                La loro efficienza è <u>cruciale per la respirazione</u> e per garantire che il corpo riceva l'ossigeno necessario e si liberi dell'anidride carbonica.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+        <button class="button" onclick="location.href='slide_3.html';" target="content-frame">
+            Indietro
+        </button>
+        <button class="button" onclick="location.href='slide_5.html';" target="content-frame">
+            Avanti
+        </button>
+    </div>
+</body>
+</html>
+
+
