@@ -4,91 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../slide_Dim.css">
+    <link rel="stylesheet" href="styleNerv.css">
     <title>Neuroni e Trasmissione dell'Impulso</title>
     <style>
-        body {
-            background: radial-gradient(circle, #4A90E2, #141E30);
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: justify;
-            position: relative; 
+
+        h3 {
+            color: rgb(255, 192, 0);
+            text-align: center;
+            font-size: 1.8rem;
         }
-        #container {
+        p, ul, li {
+            font-size: 1.5rem;
+        }
+
+
+        #slide7_container {
             width: 80%;
             margin: auto;
+            display: flex;
+            flex-direction: row;
         }
-        h1 {
-            color: red;
-            text-align: center;
+        #colm1{
+            width: 60vw;
+            display: flex;
+            flex-direction: column;
         }
-        .image-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        img {
-            width: 50%; 
-            height: auto;
-            border: 2px solid #fff; 
+        #colm1 p{
+            padding: 3%;
         }
 
-        .buttons {
-            position: fixed;
-            bottom: 20px;
-            width: 96%;
+
+        #colm2{
+            width: 45vw;
+            height: 90vh;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            padding: 0 20px;
         }
-        .button {
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
-            background-color: #900000;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s, transform 0.2s;
+        #cloud {
+            display: flex;
+            flex-direction: row;            
+            width: 50vw;
+            height: 28vh;
         }
-        .button:hover {
-            background-color: #b00000;
-            transform: scale(1.05);
+        #cloud_text {
+            background-color: rgb(255, 192, 0);
+            border: 2px solid black;
+            height: 23vh;
+            padding: 5%;
+            color: black;
+            width: 30vw;
         }
+    
+        #cervellino {
+            width: 15vw;
+            height: fit-content;
+        }
+
+        #image_container {
+            height: 56vh;
+            width: 40vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #image_container img {
+            width: 40vw; 
+            height: auto;
+            border: 2px solid #fff;
+        }
+        #image_container p{
+            background-color: rgb(255, 192, 0);
+            padding: 2%;
+            color: black;
+            border: 2px solid black;
+            width: 10vw;
+            text-align: center;
+        }
+        #image_text1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transform: translate(-20%, -200%);
+        }
+        #image_text2{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            transform: translateY(110%);
+        }
+        #text_3 {
+            transform: translate(180%, -50%);
+        }
+
+
+
     </style>
 </head>
-<body>
+<body class="body_Slide">
 
-    <div id="container" class="slide_container_Dim">
-        <h1>I NEURONI E LA TRASMISSIONE DELL'IMPULSO</h1>
-        <p>
-            Il tessuto nervoso è costituito da una rete intricata di miliardi di cellule specializzate, 
-            i <strong>neuroni</strong>, circondati da cellule di supporto. 
-            I neuroni hanno il compito di trasferire e cavalcare le sensazioni provenienti sia dall’esterno 
-            che dall’interno e di elaborare e trasmettere ordini, sotto forma di impulsi, alle cellule effettrici.
-        </p>
-        <p>
-            I neuroni possiedono due proprietà fondamentali che li distinguono dalle altre cellule:
-        </p>
-        <ul>
-            <li><strong>Eccitabilità</strong>: capacità di rispondere allo stimolo nervoso.</li>
-            <li><strong>Conducibilità</strong>: capacità di trasportare i messaggi in arrivo o in partenza come impulsi.</li>
-        </ul>
-        <p>
-            I neuroni sono cellule perenni e non possono moltiplicarsi. 
-            Per questo, se uno subisce un danno al sistema nervoso, significa che ha subito un danno permanente.
-        </p>
+    <div id="slide7_container" class="slide_container_Dim">
 
-        <div class="image-container">
-            <img src="neuroni.png" alt="Struttura del neurone e trasmissione dell'impulso">
+        <div id="colm1">
+            <h3>I neuroni e la trasmissione dell’impulso</h3>
+            <p>
+                Il tessuto nervoso è costituito da una rete intricata di miliardi di cellule specializzate, 
+                i <strong style="color: #ac0b0b;">neuroni</strong>, circondati da cellule di supporto. 
+                I neuroni hanno il compito di trasferire e cavalcare le sensazioni provenienti sia dall’esterno 
+                che dall’interno e di elaborare e trasmettere ordini, sotto forma di impulsi, alle cellule effettrici.
+            </p>
+            <p>
+                I <strong style="color: #ac0b0b;">neuroni</strong> possiedono due proprietà fondamentali che li distinguono dalle altre cellule:
+            </p>
+            <ul>
+                <li><strong>Eccitabilità :</strong> capacità di rispondere allo stimolo nervoso.</li>
+                <li><strong>Conducibilità :</strong> capacità di trasportare i messaggi in arrivo o in partenza come impulsi.</li>
+            </ul>
         </div>
+
+        <div id="colm2">
+            <div id="image_container">
+                <img src="neuroni.png" alt="Struttura del neurone e trasmissione dell'impulso">
+                    <div id="image_text1">
+                        <p>Neurone</p>
+                        <div id="image_text2">
+                            <p>Assione</p>
+                            <p id="text_3">Tessuto muscolare</p>
+                        </div>
+                    </div>
+            </div>
+
+            <div id="cloud">
+                <img id="cervellino" src="img_C.png" alt="CIAOO CERVELLINOOO!!!">
+                <p id="cloud_text">
+                    I <strong style="color: #ac0b0b;">neuroni</strong> sono cellule <u>perenni e non possono moltiplicarsi</u>. 
+                    Per questo, se uno subisce un danno al sistema nervoso, significa che ha subito un danno <u>permanente</u>.
+                </p>  
+            </div>
+
+        </div>
+
+
+
     </div>
 
+    <!-- Navigation Buttons -->
     <div class="buttons">
-        <button class="button" onclick="location.href='SistemaCompleto.html';">Indietro</button>
-        <button class="button" onclick="location.href='Introduzione1.html';">Avanti</button>
+        <button class="button" onclick="location.href='slide_6.html';" target="content-frame">
+            Indietro
+        </button>
+        <button class="button" onclick="location.href='fine.html';" target="content-frame">
+            Avanti
+        </button>
     </div>
 
 </body>
