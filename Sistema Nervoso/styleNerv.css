@@ -51,6 +51,15 @@ p {
     font-family: Urbanist;
     color: whitesmoke;
 }
+ul {
+    font-family: Urbanist;
+    color: whitesmoke;
+}
+li {
+    font-family: Urbanist;
+    color: whitesmoke;
+}
+
 
 bold{
     text-shadow: 2px 1px 2px currentColor rgb(7, 7, 7);
