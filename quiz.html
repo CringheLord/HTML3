@@ -12,14 +12,13 @@
             text-align: center;
             margin: 0;
             padding: 0;
-
-            height: 100vh;
+            width: 90vw;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
         }
-        .quiz-container {
+        .container {
             background: #2d3436;
             border-radius: 15px;
             padding: 40px;
@@ -28,12 +27,13 @@
             margin: 50px auto;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             animation: fadeIn 1s ease-in-out;
+            position: relative;
         }
         h2 {
             margin-bottom: 30px;
             font-size: 28px;
         }
-        .quiz-options button {
+        .options button, .action-btn {
             display: block;
             width: 100%;
             margin: 15px 0;
@@ -42,144 +42,280 @@
             border-radius: 8px;
             font-size: 20px;
             cursor: pointer;
+            background-color: #636e72;
+            color: white;
             transition: transform 0.2s, background 0.3s;
         }
-        .quiz-options button:hover {
-            transform: scale(1.02);
+        .options button:hover, .action-btn:hover {
+            transform: scale(1.05);
+            background-color: #74b9ff;
         }
-        .quiz-options button.correct {
-            background-color: #27ae60;
-            color: white;
+        #quiz-container {
+            display: none;
         }
-        .quiz-options button.wrong {
-            background-color: #e74c3c;
-            color: white;
-        }
-        .quiz-options button {
-            background-color: #636e72;
-            color: #fff;
-        }
-        #next-btn {
+        #next-btn, #restart-btn {
             display: none;
             background-color: #0984e3;
+        }
+        /* Pulsante reset in basso a destra */
+        #reset-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #d63031;
             color: white;
+            padding: 8px 12px;
+            font-size: 14px;
             border: none;
-            border-radius: 8px;
-            padding: 15px 30px;
-            font-size: 20px;
+            border-radius: 5px;
             cursor: pointer;
-            margin-top: 30px;
-            transition: background 0.3s, transform 0.2s;
+            opacity: 0.7;
+            transition: opacity 0.3s, transform 0.2s;
         }
-        #next-btn:hover {
-            background-color: #74b9ff;
-            transform: scale(1.05);
+        #reset-btn:hover {
+            opacity: 1;
+            transform: scale(1.1);
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        #scoreboard {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #f1c40f;
         }
     </style>
 </head>
 <body>
-    <div class="quiz-container">
-        <h2 id="quiz-question"></h2>
-        <div class="quiz-options" id="quiz-options"></div>
-        <button id="next-btn">Avanti</button>
+
+    <!-- Schermata iniziale -->
+    <div class="container" id="start-container">
+        <h2>Scegli un argomento per iniziare il quiz:</h2>
+        <div class="options">
+            <button onclick="startQuiz('cardiocircolatorio')">Sistema Cardiocircolatorio</button>
+            <button onclick="startQuiz('respiratorio')">Sistema Respiratorio</button>
+            <button onclick="startQuiz('nervoso')">Sistema Nervoso</button>
+            <button onclick="startQuiz('locomotore')">Sistema Locomotore</button>
+            <button onclick="startQuiz('digerente')">Sistema Digerente</button>
+            <button onclick="startQuiz('cellula')">La Cellula</button>
+        </div>
+        <div id="scoreboard">
+            <h3>Punteggi salvati:</h3>
+            <p>Sistema Cardiocircolatorio: <span id="score-cardiocircolatorio">0</span> punti</p> <!-- -->
+            <p>Sistema Respiratorio: <span id="score-respiratorio">0</span> punti</p>
+            <p>Sistema Nervoso: <span id="score-nervoso">0</span> punti</p>
+            <p>Sistema Locomotore: <span id="score-locomotore">0</span> punti</p>
+            <p>Sistema Digerente: <span id="score-digerente">0</span> punti</p>
+            <p>La Cellula: <span id="score-cellula">0</span> punti</p>
+        </div>        
     </div>
 
+    <!-- Contenitore del quiz -->
+    <div class="container" id="quiz-container">
+        <h2 id="quiz-question"></h2>
+        <div class="options" id="quiz-options"></div>
+        <button id="next-btn" class="action-btn">Avanti</button>
+        <button id="restart-btn" class="action-btn" onclick="restartQuiz()">Torna alla scelta</button>
+    </div>
+
+    <!-- Pulsante Reset Punteggi -->
+    <button id="reset-btn" onclick="resetScores()">🔄 Reset Punteggi</button>
+
     <script>
-        const questions = [
-            {
-                question: "componenti del sistema cardiocircolatorio?",
-                options: ["Il cuore, il sangue e i vasi sanguigni", "I polmoni, il cuore e i reni", "Il midollo osseo, i linfonodi e il fegato."],
-                correct: 0
-            },
-            {
-                question: "Quale funzione hanno i globuli rossi?",
-                options: ["Producono anticorpi per combattere le infezioni", "Trasportano ossigeno ai tessuti e rimuovono l'anidride carbonica", "Fagocitano i batteri e i virus"],
-                correct: 1
-            },
-            {
-                question: "Che cosa è il plasma?",
-                options: ["Un tessuto connettivo liquido che trasporta cellule e sostanze nel sangue", "Un elemento del sistema linfatico", "Un tipo di globulo rosso che fornisce energia alle cellule"],
-                correct: 0
-            },
-            {
-                question: "Quale tra queste affermazioni sul cuore è corretta?",
-                options: ["Pulisce il sangue dai batteri e virus", "È un organo muscolare involontario formato da cartilagine", "E' diviso in quattro camere: due atri e due ventricoli;"],
-                correct: 2
-            },
-            {
-                question: "Le arterie hanno pareti più spesse delle vene perché:",
-                options: ["Contengono più ossigeno delle vene", "Sono le ultime ramificazioni dei capillari", "Devono resistere alla pressione del sangue pompato dal cuore"],
-                correct: 2
-            }
-        ];
+        const questionSets = {
+            cardiocircolatorio: [
+                { question: "1. Quali sono i principali componenti del sistema cardiocircolatorio?", options: ["Il cuore, il sangue e i vasi sanguigni", "I polmoni, il cuore e i reni", "Il midollo osseo, i linfonodi e il fegato."], correct: 0 },
+                { question: "2. Quale funzione hanno i globuli rossi?", options: ["Producono anticorpi per combattere le infezioni", "Trasportano ossigeno ai tessuti e rimuovono l'anidride carbonica", "Fagocitano i batteri e i virus"], correct: 1 },
+                { question: "3. Che cosa è il plasma?", options: ["Un tessuto connettivo liquido che trasporta cellule e sostanze nel sangue", "Un elemento del sistema linfatico", "Un tipo di globulo rosso che fornisce energia alle cellule"], correct: 0 },
+                { question: "4. Quale tra queste affermazioni sul cuore è corretta?", options: ["Pulisce il sangue dai batteri e virus", "È un organo muscolare involontario formato da cartilagine", "E' diviso in quattro camere: due atri e due ventricoli;"], correct: 2 },
+                { question: "5. Le arterie hanno pareti più spesse delle vene perché:", options: ["Contengono più ossigeno delle vene", "Sono le ultime ramificazioni dei capillari", "Devono resistere alla pressione del sangue pompato dal cuore"], correct: 2 },
+                { question: "6.	Qual è la funzione delle piastrine?", options: ["Intervengono nella coagulazione del sangue", "Trasportano l'ossigeno nel sangue", "Producono anticorpi contro le infezioni"], correct: 0 },
+                { question: "7. Qual è la funzione principale dei capillari?", options: ["Permettere gli scambi di gas e nutrienti tra sangue e cellule", "Filtrare il sangue e rimuovere le tossine", "Trasportare l'ossigeno direttamente ai muscoli"], correct: 0 },
+                { question: "8.	Cosa succede durante la diastole del cuore?", options: ["Il cuore si rilassa e si riempie di sangue", "Il cuore si contrae per pompare il sangue fuori", "Il sangue ritorna ai polmoni per ossigenarsi"], correct: 0 },
+                { question: "9.	Quale valvola impedisce il reflusso di sangue dai ventricoli agli atri?", options: ["Le valvole atrioventricolari (tricuspide e mitrale)", "Le valvole semilunari (aortica e polmonare)", "La valvola coronarica"], correct: 0 },
+                { question: "10. Quale affermazione sui globuli bianchi è corretta", options: ["Difendono l'organismo da infezioni e agenti patogeni", "Trasportano ossigeno ai muscoli", "Eliminano il colesterolo nel sangue"], correct: 0 }
+            ],
+            respiratorio: [
+                { question: "1.	Qual è la funzione principale dell'apparato respiratorio?", options: ["Permettere lo scambio di gas tra l'ambiente e il sangue", "Pompare il sangue nel corpo", "Produrre globuli bianchi per combattere le infezioni"], correct: 0 },
+                { question: "2.	Dove avviene lo scambio di gas nei polmoni?", options: ["Negli alveoli polmonari", "Nella trachea", "Nei bronchi principali"], correct: 0 },
+                { question: "3.	Quale tra questi organi fa parte del sistema respiratorio?", options: ["La trachea", "L'intestino tenue", "Il fegato"], correct: 0 },
+                { question: "4.	Quale gas viene assorbito durante l'inspirazione?", options: ["Ossigeno", "Anidride Carbonica", "Azoto"], correct: 0 },
+                { question: "5.	Quale muscolo è fondamentale per la respirazione?", options: ["Il diaframma", "Il cuore", "Il bicipite"], correct: 0 },
+                { question: "6.	Durante l'espirazione, cosa accade ai polmoni?", options: ["Si contraggono e rilasciano aria", "Si espandono e si riempiono d'aria", "Si chiudono completamente"], correct: 0 },
+                { question: "7.	Qual è il percorso dell'aria dall'esterno fino ai polmoni?", options: ["Naso → faringe → laringe → trachea → bronchi → alveoli", "Naso → esofago → bronchi → alveoli", "Bocca → faringe → esofago → bronchi"], correct: 0 },
+                { question: "8.	Che funzione ha l'epiglottide?", options: ["Impedire al cibo di entrare nella trachea", "Trasportare ossigeno ai polmoni", "Produrre cellule per la difesa immunitaria"], correct: 0 },
+                { question: "9.	Cosa succede se l'ossigeno non arriva correttamente alle cellule?", options: ["Le cellule non possono produrre energia sufficiente", "I globuli bianchi diminuiscono", "Il cuore smette di battere immediatamente"], correct: 0 },
+                { question: "10. Qual è la funzione delle ciglia nella trachea?", options: ["Rimuovere impurità e particelle dannose", "Aumentare la capacità polmonare", "Aiutare nella produzione di ossigeno"], correct: 0 }
+            ],
+            nervoso: [
+                { question: "1.	Qual è la funzione principale del sistema nervoso?", options: ["Coordinare e controllare le attività del corpo", "Produrre cellule del sangue", "Filtrare le tossine dal corpo"], correct: 0 },
+                { question: "2.	Quali sono le due principali parti del sistema nervoso?", options: ["Sistema nervoso centrale e sistema nervoso periferico", "Sistema endocrino e sistema nervoso", "Sistema muscolare e sistema nervoso"], correct: 0 },
+                { question: "3.	Quale organo è responsabile del controllo delle funzioni volontarie e involontarie?", options: ["Il cervello", "Il cuore", "Il pancreas"], correct: 0 },
+                { question: "4.	Qual è il ruolo dei neuroni?", options: ["Trasmettere impulsi nervosi e informazioni tra diverse parti del corpo", "Produrre energia per i muscoli", "Trasportare ossigeno nel sangue"], correct: 0 },
+                { question: "5.	Dove si trovano i nervi cranici?", options: ["Nell'encefalo", "Nel midollo osseo", "Nei polmoni"], correct: 0 },
+                { question: "6.	Qual è la funzione del midollo spinale?", options: ["Trasmettere informazioni tra cervello e resto del corpo", "Regolare la produzione di ormoni", "Filtrare il sangue"], correct: 0 },
+                { question: "7.	Quale parte del sistema nervoso è responsabile delle risposte automatiche, come la respirazione?", options: ["Il sistema nervoso autonomo", "Il sistema nervoso periferico", "Il sistema endocrino"], correct: 0 },
+                { question: "8.	Qual è il ruolo dell'ipotalamo?", options: ["Regolare funzioni come la fame, la sete e la temperatura corporea", "Filtrare le tossine dal sangue", "Generare impulsi elettrici"], correct: 0 },
+                { question: "9.	Quale funzione ha il cervelletto?", options: ["Coordinare i movimenti e mantenere l’equilibrio", "Regolare la digestione", "Produrre cellule immunitarie"], correct: 0 },
+                { question: "10. Quale dei seguenti è un tipo di neurone?", options: ["Sensoriale, motorio e di associazione", "Muscolare, osseo e epidermico", "Endocrino, digestivo e respiratorio"], correct: 0 }
+            ],
+            locomotore: [
+                { question: "1.	Quali sono i principali componenti dell'apparato locomotore?", options: ["Muscoli, ossa e articolazioni", "Polmoni, cuore e fegato", "Midollo spinale, nervi e cervello"], correct: 0 },
+                { question: "2.	Qual è la funzione principale del sistema scheletrico?", options: ["Sostenere il corpo e proteggere gli organi interni", "Produrre globuli bianchi", "Controllare i movimenti volontari"], correct: 0 },
+                { question: "3.	Quali sono i tre tipi di muscoli presenti nel corpo umano?", options: ["Muscoli scheletrici, muscoli lisci e muscolo cardiaco", "Muscoli involontari, muscoli elastici e muscoli motori", "Muscoli flessibili, muscoli rigidi e muscoli automatici"], correct: 0 },
+                { question: "4.	Quali ossa proteggono il cervello?", options: ["Le ossa del cranio", "Le vertebre", "Le scapole"], correct: 0 },
+                { question: "5.	Qual è la funzione dei tendini?", options: ["Collegare i muscoli alle ossa", "Proteggere le articolazioni", "Trasportare ossigeno ai muscoli"], correct: 0 },
+                { question: "6.	Cosa caratterizza i muscoli antagonisti?", options: ["Lavorano in coppia per eseguire movimenti opposti", "Sono presenti solo nelle braccia", "Controllano esclusivamente i movimenti involontari"], correct: 0 },
+                { question: "7.	Quale di queste articolazioni è mobile?", options: ["Il ginocchio", "Le suture craniche", "Le vertebre"], correct: 0 },
+                { question: "8.	Quali sono le principali funzioni delle cartilagini?", options: ["Proteggere le articolazioni e facilitare i movimenti", "Produrre globuli rossi", "Trasportare impulsi nervosi"], correct: 0 },
+                { question: "9.	Quale osso è il più lungo del corpo umano?", options: ["Il femore", "L'omero", "Il radio"], correct: 0 },
+                { question: "10. uale affermazione sulle ossa è corretta?", options: ["Sono costituite da tessuto osseo compatto e spugnoso", "Sono composte unicamente da cartilagine", "Non hanno capacità rigenerative"], correct: 0 }
+            ],
+            digerente: [
+                { question: "1.	Qual è la funzione principale dell'apparato digerente?", options: ["Trasformare il cibo in nutrienti assimilabili", "Pompare sangue nel corpo", "Filtrare le tossine dal sangue"], correct: 0 },
+                { question: "2.	Dove inizia la digestione?", options: ["Nella bocca con la masticazione e la saliva", "Nell'intestino tenue", "Nello stomaco"], correct: 0 },
+                { question: "3.	Quale organo produce la bile?", options: ["Il fegato", "Il pancreas", "L'intestino crasso"], correct: 0 },
+                { question: "4.	Qual è il ruolo dell'intestino tenue?", options: ["Assorbire i nutrienti dal cibo", "Eliminare le tossine", "Produrre enzimi digestivi"], correct: 0 },
+                { question: "5.	Quali sono gli enzimi coinvolti nella digestione?", options: ["Amilasi, lipasi e proteasi", "Insulina, globuline e adrenalina", "Emoglobina, ferritina e lattasi"], correct: 0 },
+                { question: "6.	Come si chiama la sostanza semi-liquida prodotta nello stomaco?", options: ["Chimo", "Bolo", "Muco"], correct: 0 },
+                { question: "7.	Qual è la funzione dei villi intestinali?", options: ["Aumentare la superficie di assorbimento dei nutrienti", "Secernere succhi digestivi", "Trasportare l'ossigeno nel sangue"], correct: 0 },
+                { question: "8.	Qual è la funzione principale dell'intestino crasso?", options: ["Assorbire acqua e formare le feci", "Produrre ormoni digestivi", "Trasformare il cibo in energia"], correct: 0 },
+                { question: "9.	Quale tra questi organi aiuta nella digestione ma non fa parte del tubo digerente?", options: ["Il pancreas", "L'esofago;", "L'intestino tenue"], correct: 0 },
+                { question: "10. Quale tra queste strutture evita che il cibo entri nella trachea?", options: ["L'epiglottide", "L'esofago", "La valvola ileocecale"], correct: 0 }
+            ],
+            cellula: [
+                { question: "1.	Qual è la funzione principale della membrana cellulare?", options: ["Controllare il passaggio di sostanze dentro e fuori la cellula", "Produrre energia per la cellula", "Sintetizzare proteine"], correct: 0 },
+                { question: "2.	Quale organulo è responsabile della produzione di energia nella cellula?", options: ["Il mitocondrio", "Il lisosoma", "L'apparato di Golgi"], correct: 0 },
+                { question: "3.	Qual è la funzione del nucleo cellulare?", options: ["Contenere il DNA e controllare le attività cellulari", "Trasportare ossigeno", "Regolare la digestione"], correct: 0 },
+                { question: "4.	Dove avviene la sintesi delle proteine nella cellula?", options: ["Nei ribosomi", "Nel lisosoma", "Nei mitocondri"], correct: 0 },
+                { question: "5.	Qual è il ruolo dell'apparato di Golgi?", options: ["Modificare, immagazzinare e trasportare proteine e lipidi", "Produrre energia", "Filtrare le sostanze tossiche"], correct: 0 }
+            ]
+        };
 
         let currentQuestionIndex = 0;
         let score = 0;
+        let selectedQuestions = [];
+        let selectedTopic = "";
+        let scores = JSON.parse(localStorage.getItem("quizScores")) || {};
 
+        const startContainer = document.getElementById("start-container");
+        const quizContainer = document.getElementById("quiz-container");
         const quizQuestion = document.getElementById("quiz-question");
         const quizOptions = document.getElementById("quiz-options");
         const nextButton = document.getElementById("next-btn");
+        const restartButton = document.getElementById("restart-btn");
+        const scoreboard = document.getElementById("scoreboard");
+
+        function startQuiz(topic) {
+            selectedTopic = topic;
+            selectedQuestions = questionSets[topic];
+            currentQuestionIndex = 0;
+            score = 0;
+
+            startContainer.style.display = "none";
+            quizContainer.style.display = "block";
+            nextButton.style.display = "none";
+            restartButton.style.display = "none";
+
+            loadQuestion();
+        }
+
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]]; 
+            }
+        }
 
         function loadQuestion() {
-            const currentQuestion = questions[currentQuestionIndex];
+            const currentQuestion = selectedQuestions[currentQuestionIndex];
+
+            
+            let options = currentQuestion.options.map((option, index) => ({
+                text: option,
+                isCorrect: index === currentQuestion.correct
+            }));
+
+            shuffleArray(options);
+
             quizQuestion.textContent = currentQuestion.question;
             quizOptions.innerHTML = "";
-            
-            currentQuestion.options.forEach((option, index) => {
+
+            options.forEach((option) => {
                 const button = document.createElement("button");
-                button.textContent = option;
-                button.addEventListener("click", () => checkAnswer(index, button));
+                button.textContent = option.text;
+                button.addEventListener("click", () => checkAnswer(option.isCorrect, button));
                 quizOptions.appendChild(button);
             });
         }
 
         function checkAnswer(selectedIndex, button) {
-            const currentQuestion = questions[currentQuestionIndex];
-            const correctIndex = currentQuestion.correct;
+            const currentQuestion = selectedQuestions[currentQuestionIndex];
 
-            if (selectedIndex === correctIndex) {
-                button.classList.add("correct");
-                score++;
-            } else {
-                button.classList.add("wrong");
-                document.querySelectorAll("#quiz-options button")[correctIndex].classList.add("correct");
-            }
-
-            // Disabilita tutti i pulsanti dopo la selezione
-            document.querySelectorAll("#quiz-options button").forEach(btn => {
-                btn.disabled = true;
+            let correctButton;
+            document.querySelectorAll("#quiz-options button").forEach((btn, index) => {
+                if (btn.textContent === currentQuestion.options[currentQuestion.correct]) {
+                    correctButton = btn;
+                }
             });
 
+            if (button.textContent === currentQuestion.options[currentQuestion.correct]) {
+                button.style.backgroundColor = "#27ae60"; // Verde se corretto
+                score++;
+            } else {
+                button.style.backgroundColor = "#e74c3c"; // Rosso se sbagliato
+                correctButton.style.backgroundColor = "#27ae60"; // Mostra la risposta corretta
+            }
+
+            document.querySelectorAll("#quiz-options button").forEach(btn => btn.disabled = true);
             nextButton.style.display = "block";
         }
 
+
         function showNextQuestion() {
             currentQuestionIndex++;
-            if (currentQuestionIndex < questions.length) {
+            if (currentQuestionIndex < selectedQuestions.length) {
                 loadQuestion();
                 nextButton.style.display = "none";
             } else {
-                quizQuestion.textContent = `Quiz completato! 🎉 Hai totalizzato ${score} su ${questions.length} punti.`;
+                scores[selectedTopic] = score;
+                localStorage.setItem("quizScores", JSON.stringify(scores));
+                quizQuestion.textContent = `Quiz completato! 🎉 Hai totalizzato ${score} punti.`;
                 quizOptions.innerHTML = "";
                 nextButton.style.display = "none";
+                restartButton.style.display = "block";
+                updateScoreboard();
+            }
+        }
+        
+        function restartQuiz() {
+          quizContainer.style.display = "none";
+          startContainer.style.display = "block";
+          currentQuestionIndex = 0;
+          selectedQuestions = [];
+        }
+        
+        function resetScores() {
+            if (confirm("Sei sicuro di voler cancellare tutti i punteggi?")) {
+                localStorage.removeItem("quizScores");
+                scores = {};
+                updateScoreboard();
             }
         }
 
-        nextButton.addEventListener("click", showNextQuestion);
 
-        // Carica la prima domanda all'inizio
-        loadQuestion();
+        function updateScoreboard() {
+            document.getElementById("score-cardiocircolatorio").textContent = scores["cardiocircolatorio"] || 0;
+            document.getElementById("score-respiratorio").textContent = scores["respiratorio"] || 0;
+            document.getElementById("score-nervoso").textContent = scores["nervoso"] || 0;
+            document.getElementById("score-locomotore").textContent = scores["locomotore"] || 0;
+            document.getElementById("score-digerente").textContent = scores["digerente"] || 0;
+            document.getElementById("score-cellula").textContent = scores["cellula"] || 0;
+        }
+
+
+        updateScoreboard();
+        nextButton.addEventListener("click", showNextQuestion);
     </script>
+
 </body>
 </html>
 
