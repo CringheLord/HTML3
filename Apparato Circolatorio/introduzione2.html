@@ -3,75 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../slide_Dim.css">
     <title>Introduzione</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
             height: 100vh;
+            width: 100vw;
             background: url('sfondo_cuore.png') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
+            overflow: hidden;
         }
-        #content {
-            text-align: start;
-            padding: 20px 20px 0px 20px;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 90vh;
+            width: 90vw;
+            text-align: center;
         }
-        #content p {
-            margin-top: 0px;
-            font-size: 40px;
+
+        .content p {
+            font-size: 2.2vw;
             color: #333;
         }
-        #content .image-row {
+
+        .image-row {
             display: flex;
             justify-content: center;
-            gap: 280px;
-            margin-top: 80px;
-            align-items: flex-end;
+            align-items: center;
+            gap: 8vw;
+            flex-wrap: nowrap;
+            max-height: 35vh;
         }
-        #content .image-row img {
-            max-width: 40%;
+
+        .image-row img {
+            width: 20vw;
+            max-width: 210px;
             height: auto;
             border-radius: 8px;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
         }
-        #content .image-row img:nth-child(1) {
-            transform: translateY(50px);
-        }
-        #content .image-row img:nth-child(2) {
-            transform: translateY(80px) translateX(-50px);
-        }
-        #content .image-row img:nth-child(3) {
-            transform: translateY(10px);
-        }
-        #content .text-row {
-            display: flex;
-            justify-content: center;
-            gap: 280px;
-            margin-top: 80px;
-            align-items: flex-end;
-        }
-        #content .text-row p {
-            font-size: 35px;
+
+        .image-row p{
+            font-size: 2vw;
             color: #333;
+            margin-top: 2vh;
         }
-        #content .text-row p:nth-child(1) {
-            transform: translateY(-85px) translateX(30px);
-        }
-        #content .text-row p:nth-child(3) {
-            transform: translateY(-78px) translateX(30px);
-        }
+
         .buttons {
-            position: absolute;
-            bottom: 25px;
-            width: 100%;
             display: flex;
             justify-content: space-between;
+            width: 100%;
         }
+
         .button {
             padding: 10px 20px;
             font-size: 1rem;
@@ -86,50 +82,59 @@
         }
         .button:hover {
             background-color: #b00000;
-        }
-        .buttons button:nth-child(1) {
-            transform: translateX(30px);
-        }
-        .buttons button:nth-child(1):hover {
-            transform: translateX(30px) scale(1.05);
-        }
-        .buttons button:nth-child(2) {
-            transform: translateX(-30px);
-        }
-        .buttons button:nth-child(2):hover {
-            transform: translateX(-30px) scale(1.05);
+            transform: scale(1.05);
         }
 
+        @media (max-width: 768px) {
+            .image-row {
+                flex-direction: column;
+                gap: 1vh;
+            }
+
+            .text-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 2vh;
+            }
+
+            .image-row img {
+                width: 30vw;
+            }
+        }
 
     </style>
 </head>
 <body>
-    <div id="content" class="slide_container_Dim">
-        <p>
-            Per funzionare ogni macchina, e quindi anche l'uomo, ha bisogno di carburante da cui riceve energia e ha bisogno di eliminare le sostanze di scarto. 
-            Ovviamente anche tutte le cellule del nostro organismo hanno bisogno di sostanze nutritive ed ossigeno e devono eliminare le sostanze di rifiuto. 
-            Tutto ciò è svolto dall'apparato circolatorio.
-        </p>
-        <br>
-        <p>
-            L'apparato cardiocircolatorio è formato da:
-        </p>
+    <div class="container">
+        <div class="content">
+            <p>
+                Per funzionare ogni macchina, e quindi anche l'uomo, ha bisogno di carburante da cui riceve energia e ha bisogno di eliminare le sostanze di scarto. 
+                Ovviamente anche tutte le cellule del nostro organismo hanno bisogno di sostanze nutritive ed ossigeno e devono eliminare le sostanze di rifiuto. 
+                Tutto ciò è svolto dall'apparato circolatorio.
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>L'apparato cardiocircolatorio è formato da:</p>
+        </div>
         <div class="image-row">
-            <img src="sangue.png" alt="immagine sangue" class="sangue-image">
-            <img src="vasi.png" alt="immagine vasi" class="vasi-image">
-            <img src="cuore1.png" alt="immagine cuore" class="cuore1-image">
+            <div>
+                <img src="sangue.png" alt="immagine sangue">
+                <p>Il Sangue</p>
+            </div>
+            <div>
+                <img src="vasi.png" alt="immagine vasi">
+                <p>I Vasi Sanguigni</p>
+            </div>
+            <div>
+                <img src="cuore1.png" alt="immagine cuore">
+                <p>Il Cuore</p>
+            </div>
         </div>
-        <div class="text-row">
-            <p>Il Sangue</p>
-            <p>I Vasi Sanguigni</p>
-            <p>Il Cuore</p>
+        <div class="buttons">
+            <button class="button" onclick="location.href='introduzione_1.html';">Indietro</button>
+            <button class="button" onclick="location.href='sangue.html';">Avanti</button>
         </div>
     </div>
-
-    <div class="buttons">
-        <button class="button" onclick="location.href='introduzione1.html';" target="content-frame">Indietro</button>
-        <button class="button" onclick="location.href='sangue.html';" target="content-frame">Avanti</button>
-    </div>
-
 </body>
 </html>
