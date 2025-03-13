@@ -49,20 +49,41 @@
         .buttons button:nth-child(2):hover {
             transform: translateX(-30px) scale(1.05);
         }
+        /*pulsazione*/
+        @keyframes pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+        }
+        50% {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+        }
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+        }
+}
+
+.pulsate {
+    animation: pulse 1.5s infinite;
+}
 
     </style>
 </head>
 <body>
 
-        <!-- Navigation Buttons -->
-        <div class="buttons">
-            <button class="button" style="visibility: hidden;" onclick="location.href='Introduzione.html';" target="content-frame">
-                Indietro
-            </button>
-            <button class="button" onclick="location.href='slide_3.html';" target="content-frame">
-                Prossimo Argomento
-            </button>
-        </div>
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+        <button class="button pulsate" style="visibility: hidden;" onclick="playSound(); location.href='slide_2.html';" target="content-frame">
+            Indietro
+        </button>
+        <button class="button pulsate" onclick="playSound(); location.href='slide_4.html';" target="content-frame">
+            Prossimo Argomento
+        </button>
+    </div>
+
+
     
 </body>
 </html>
