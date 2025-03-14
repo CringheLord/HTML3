@@ -75,6 +75,7 @@
 <body>
 
 
+
     <script>
         fetch('../sounds_h.html')
             .then(response => response.text())
@@ -82,6 +83,13 @@
                 document.body.insertAdjacentHTML("beforeend", data);
             });
     </script>
+
+    <audio id="soundCheer" autoplay>
+        <source src="../Sounds/crowd_cheer_cut.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    
     
 
     <!-- Navigation Buttons -->
