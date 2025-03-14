@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../slide_Dim.css">
+    <title>Slide_2</title>
+   
+
+    <style>
+        body {
+            background-color: rgb(27, 29, 46);
+        }
+
+        #slide_container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            transform: translateY(15vh);
+        }
+        
+        img {
+            transform: translateX(-105%);
+        }
+
+        p {
+            color: white;
+            font-size: 2.4rem;
+            font-family: Urbanist;
+            width: 70vw;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="slide_container">
+
+        <img src="img2.png">
+
+        <p>La cellula eucariote è composta da vari <span style="color: rgb(168, 14, 14);"><u>organelli specializati</u></span> che lavorano insieme per svolgere diverse funzioni. 
+            È una struttura complessa e affascinante che svolge un ruolo cruciale nel mantenimento della vita.
+        </p>
+
+        <p>
+            VEDIAMO INSIEME GLI ORGANELLI:
+        </p>
+    </div>
+
+
+    <script>
+        fetch('../sounds_h.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+
+            
+    </script>
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'introduzione.html');" target="content-frame">
+            Indietro
+        </button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'slide_3.html');" target="content-frame">
+            Avanti
+        </button>
+    </div>
+
+
+    <script src="../playAudio.js"></script>
+    
+</body>
+</html>

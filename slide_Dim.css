@@ -1,3 +1,8 @@
+@font-face {
+    src: url(../webfonts/Urbanist-VariableFont_wght.ttf);
+    font-family: Urbanist;
+}
+
 /*BOTTONIIII*/
 .buttons {
     position: fixed;

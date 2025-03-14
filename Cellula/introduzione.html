@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_Dige.css">
+    <link rel="stylesheet" href="../slide_Dim.css">
+    <title>Introduzione</title>
+
+    <style>
+        body {
+            background-color: rgb(27, 29, 46);
+            background-image: url(cellula1.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size:contain;
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <script>
+        fetch('../sounds_h.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+        <button class="button" style="visibility: hidden;" onclick="playSoundAndNavigate('SoundSlideButt', 'principale.html');" target="content-frame">
+            Indietro
+        </button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'slide_3.html');" target="content-frame">
+            Avanti
+        </button>
+    </div>
+
+    <script src="../playAudio.js"></script>
+    
+</body>
+</html>
