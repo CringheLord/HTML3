@@ -131,10 +131,23 @@
                 <p>Il Cuore</p>
             </div>
         </div>
+
+        <script>
+            fetch('../sounds_h.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML("beforeend", data);
+                });
+        </script>
+
         <div class="buttons">
-            <button class="button" onclick="location.href='introduzione_1.html';">Indietro</button>
-            <button class="button" onclick="location.href='sangue.html';">Avanti</button>
+            <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'introduzione1.html');">Indietro</button>
+            <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'sangue.html');">Avanti</button>
         </div>
     </div>
+
+    <script src="../playAudio.js"></script>
 </body>
 </html>
+
+

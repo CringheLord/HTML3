@@ -103,10 +103,23 @@
             <li>trasporto di sostanze importanti, come gli ormoni, gli anticorpi ed altre sostanze.</li>
         </ul>
     </div>
+
+
+    <script>
+        fetch('../sounds_h.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+
     <div class="buttons">
-        <button class="button" onclick="location.href='introduzione2.html';" target="content-frame">Indietro</button>
-        <button class="button" onclick="location.href='vasi_sanguigni.html';" target="content-frame">Avanti</button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'introduzione2.html');" target="content-frame">Indietro</button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'vasi_sanguigni.html');" target="content-frame">Avanti</button>
     </div>
     
+    <script src="../playAudio.js"></script>
+
 </body>
 </html>
+
