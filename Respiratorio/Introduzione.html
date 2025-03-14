@@ -50,6 +50,15 @@
 </head>
 <body>
 
+    
+    <script>
+        fetch('../sounds_h.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+
     <div id="slide_container" class="slide_container_Dim">
         <div id="title">
             Apparato Respiratorio
