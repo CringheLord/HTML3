@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <style>
         body {
             overflow: visible;
-            background-image: url(sfondo_fine_quiz_higher.png);
+            background-image: url(../sfondo_fine_quiz_higher.png);
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
@@ -74,17 +74,27 @@
 </head>
 <body>
 
+
+    <script>
+        fetch('../sounds_h.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+    
+
     <!-- Navigation Buttons -->
     <div class="buttons">
-        <button class="button pulsate" style="visibility: hidden;" onclick="playSound(); location.href='slide_2.html';" target="content-frame">
+        <button class="button pulsate" style="visibility: hidden;" onclick="playAudio(); location.href='slide_2.html';" target="content-frame">
             Indietro
         </button>
-        <button class="button pulsate" onclick="playSound(); location.href='slide_4.html';" target="content-frame">
-            Prossimo Argomento
+        <button class="button pulsate" onclick="playSoundAndNavigate('SoundSlideButt', '../Respiratorio/Introduzione.html');" target="content-frame">
+            Go to Quiz
         </button>
     </div>
 
+    <script src="../playAudio.js"></script>
 
-    
 </body>
 </html>
