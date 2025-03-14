@@ -1,8 +1,6 @@
-function playSound() {
-    var sound = document.getElementById("clickSound");
+function playSound(soundId) {
+    var sound = document.getElementById(soundId);
     if (sound) {
         sound.play();
     }
 }
-
-<script src="script.js"></script>

@@ -74,34 +74,17 @@
 </head>
 <body>
 
-    
-    <script>
-        fetch('sounds_h.html')
-            .then(response => response.text())
-            .then(data => {
-                document.body.insertAdjacentHTML("beforeend", data);
-            });
-    </script>
-
-    <audio id="SoundSlideButt">
-        <source src="Metallic_Clank.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-
-    
-
     <!-- Navigation Buttons -->
     <div class="buttons">
         <button class="button pulsate" style="visibility: hidden;" onclick="playSound(); location.href='slide_2.html';" target="content-frame">
             Indietro
         </button>
-        <button class="button pulsate" onclick=" playSound('SoundSlideButt'); location.href='quiz.html';" target="content-frame">
+        <button class="button pulsate" onclick="playSound(); location.href='slide_4.html';" target="content-frame">
             Prossimo Argomento
         </button>
     </div>
 
 
-
+    
 </body>
 </html>
