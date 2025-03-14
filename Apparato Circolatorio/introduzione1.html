@@ -45,14 +45,27 @@
             Il Sistema<br>
             Cardiocircolatorio
         </div>
+
+        <script>
+            fetch('../sounds_h.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML("beforeend", data);
+                });
+        </script>
+       
+        
     <!-- Navigation Buttons -->
     <div class="buttons">
         <button class="button" style="visibility: hidden;" target="content-frame">
             Indietro
         </button>
-        <button class="button" onclick="location.href='introduzione2.html';" target="content-frame">
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'Introduzione2.html');" target="content-frame">
             Avanti
         </button>
+
+        <script src="../playAudio.js"></script>
+
     </div>
     </div>
 

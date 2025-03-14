@@ -81,10 +81,23 @@
             <img src="cuore2.jpg" alt="immagine sangue" class="sangue-image">
         </div>
     </div>
+
+
+    <script>
+        fetch('../sounds_h.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+
     <div class="buttons">
-        <button class="button" onclick="location.href='cuore.html';" target="content-frame">Indietro</button>
-        <button class="button" onclick="location.href='fine.html';" target="content-frame">Avanti</button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'cuore.html');" target="content-frame">Indietro</button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'fine.html');" target="content-frame">Avanti</button>
     </div>
+
+    <script src="../playAudio.js"></script>
     
 </body>
 </html>
+
