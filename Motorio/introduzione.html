@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleLoco.css">
+    <link rel="stylesheet" href="../slide_Dim.css">
+    <title>Introduzione</title>
+
+    <style>
+        body {
+            background-color: rgb(210, 202, 199);
+            background-image: url(image1.png);
+            background-repeat: no-repeat;
+            background-position-y: 1%;
+
+            font-size: 2rem;
+        }
+
+        #slide1_container {
+            display: flex;
+            flex-direction: column;
+            width: 40vw;
+            transform: translate(130%, 10%);
+        }
+
+        p {
+            width: 39vw;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="slide1_container">
+        <h3>Apparato Locomotore</h3>
+
+        <p>
+            Il <span style="color: rgb(111, 0, 255);"><u>corpo umano</u></span> non sarebbe capace di compiere alcun movimento se non ci fosse l’azione congiunta:
+        </p>
+        <ul>
+            <li>dei <span style="color: rgb(226, 5, 5);"><u>muscoli</u></span>;</li>
+            <li>dello <span style="color: rgb(70, 173, 49);"><u>scheletro</u></span>;</li>
+            <li>delle <span style="color: rgb(0, 140, 255);"><u>articolazioni</u></span>;</li>
+        </ul>
+    </div>
+
+
+    <script>
+        fetch('../sounds_h.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+        <button class="button" style="visibility: hidden;" target="content-frame">
+            Indietro
+        </button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'slide_2.html');" target="content-frame">
+            Avanti
+        </button>
+    </div>
+
+    <script src="../playAudio.js"></script>
+    
+</body>
+</html>

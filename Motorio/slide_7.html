@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleLoco.css">
+    <link rel="stylesheet" href="../slide_Dim.css">
+    <title>slide7</title>
+
+    <style>
+        #slide7_container {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            justify-content: space-evenly;
+            padding: 1%;
+        }
+        #col1 {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+        }
+        #col1 img {
+            width: 30vw;
+            align-self: center;
+        }
+        #text {
+            width: 45vw;
+            font-size: 2rem;
+            padding: 1%;
+
+        }
+        #col2 {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+        }
+        #image3 {
+            width: 30vw;
+            transform: translateX(10%);
+        }
+        #image2 {
+            width: 37vw;
+            align-self: center;
+            
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="slide7_container">
+        <div id="col1">
+            <div id="text">
+                <h3 id="highlight-pink">Le Ossa</h3>
+                <p>
+                    Le ossa dello scheletro hanno una resistenza sorprendente, ma sono anche elastiche per sopportare gli urti e leggere per non appesantire il corpo. <br>Esse sono costituite da acqua e <strong>sali minerali</strong>, come <strong style="color: goldenrod;">calcio e fosforo</strong>, che le rendono compatte e resistenti. <br>Contengono inoltre l’<strong style="color: rgb(255, 255, 255);">osseina</strong>, una sostanza che dà elasticità.
+                    Le ossa sono formate dal tessuto osseo, che può essere spugnoso o compatto. <br><u>Il primo</u> si trova soprattutto nelle estremità delle ossa lunghe e ha piccoli buchi proprio come una spugna. <br><u>Il secondo</u>, invece, si trova nella parte centrale delle ossa e forma uno strato duro e resistente.
+                </p>
+            </div>
+            <img src="image7_1.png">
+        </div>
+
+        <div id="col2">
+            <img id="image2" src="image7_2.png">
+            <img id="image3" src="image7_3.png">            
+        </div>
+    </div>
+
+
+    <script>
+        fetch('../sounds_h.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'slide_6.html');" target="content-frame">
+            Indietro
+        </button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'slide_8.html');" target="content-frame">
+            Avanti
+        </button>
+    </div>
+
+    <script src="../playAudio.js"></script>
+
+</body>
+</html>
