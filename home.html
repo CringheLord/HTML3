@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvenuto - Esploriamo il Corpo Umano</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #74b9ff, #a29bfe);
+            background-size: 400% 400%;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            /*max-width: 1000px;*/
+            width: 100%;
+            flex-direction: row;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: 600;
+            color: #ff4d6d;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .apparati {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .box {
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            color: white;
+        }
+
+        .cellula { background: #ff6b6b; }
+        .locomotore { background: #ff9f43; }
+        .respiratorio { background: #1dd1a1; }
+        .digerente { background: #feca57; }
+        .circolatorio { background: #54a0ff; }
+        .nervoso { background: #5f27cd; }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            color: white;
+            background: linear-gradient(90deg, #ff4d6d, #ff6b6b);
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 3px 10px rgba(255, 77, 109, 0.4);
+        }
+
+        .button:hover {
+            background: linear-gradient(90deg, #ff6b6b, #ff4d6d);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.6);
+        }
+
+        /* Sezione con personaggio e vignetta */
+        .character-section {
+            position: relative;
+            width: 200px;
+            top: 60px;
+            
+        }
+
+        .character {
+            width: 100%;
+        }
+
+        .speech-bubble {
+            position: absolute;
+            top: -130px;
+            left: 30px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 1em;
+            font-weight: bold;
+            color: #333;
+            max-width: 200px;
+            text-align: left;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .speech-bubble::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        
+        <!-- Contenitore principale -->
+        <div class="container">
+            <h1>Benvenuto nel nostro programma sul Corpo Umano!</h1>
+            <p>Scopri i segreti del corpo umano attraverso un viaggio affascinante tra i suoi apparati.</p>
+            <p>Ecco cosa esploreremo insieme:</p>
+
+            <div class="apparati">
+                <div class="box cellula">🦠 La Cellula</div>
+                <div class="box circolatorio">❤️ Apparato Circolatorio</div>
+                <div class="box respiratorio">🫁 Apparato Respiratorio</div>
+                <div class="box nervoso">🧠 Apparato Nervoso</div>
+                <div class="box locomotore">🦴💪 Apparato Locomotore</div>
+                <div class="box digerente">🍽️ Apparato Digerente</div>
+                
+            </div>
+
+            <a href="pagina-successiva.html" class="button">Inizia l'esplorazione 🚀</a>
+        </div>
+
+        <!-- Sezione con illustrazione e vignetta -->
+        <div class="character-section">
+            <div class="speech-bubble">Ciao! Sei pronto a scoprire come funziona il corpo umano? 😃</div>
+            <img src="dottore.png" alt="Personaggio" class="character">
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina di Aiuto - Guida</title>
+    <style>
+        /* Stile Generale */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #74b9ff, #a29bfe);
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            background: white;
+            padding: 35px;
+            max-width: 900px;
+            width: 90%;
+            border-radius: 12px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* Stile per ogni riga */
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 25px;
+            border-bottom: 2px solid #ddd;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .item:hover {
+            background: #f0f0f0;
+        }
+
+        /* Stile delle immagini */
+        .item img {
+            width: 255px;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .item img:hover {
+            transform: scale(1.05);
+        }
+
+        /*Stile riga doppia*/
+        #double_item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .double_item{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            transition: background 0.3s ease-in-out;
+        }
+        
+        /* Stile del testo */
+        .text {
+            flex: 1;
+            color: #444;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .text strong {
+            color: #222;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>📖 Guida Passo-Passo</h2>
+
+        <div class="item">
+            <img src="immagini_aiuto/home.png" alt="Immagine 1">
+            <div class="text">
+                <strong>Pulsante Home:</strong> Cliccando questo pulsante tornerai alla schermata iniziale di benvenuto.
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="immagini_aiuto/apparati.png" alt="Immagine 2">
+            <div class="text">
+                <strong>Apparati:</strong> Subito sotto hai a disposizione i vari apparati a cui poter accedere
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="immagini_aiuto/sottomenu.png" alt="Immagine 3">
+            <div class="text">
+                <strong>Scelta Argomento:</strong> Ogni apparato ha un sottomenù a tendina nella quale potrai scegliere uno specifico argomento.
+            </div>
+        </div>
+
+        <div class="item" id="double_item">
+
+            <div class="double_item">
+                <img src="immagini_aiuto/quiz.png" alt="Immagine 4">
+                <div class="text">
+                    <strong>Pulsante Quiz:</strong> Cliccando questo pulsante verrà mostrata la schermata dei quiz divisi per argomento.
+                </div>
+            </div>
+
+            <div class="double_item">
+                <img src="immagini_aiuto/quiz_2.png" alt="Immagine 8">
+                <div class="text">
+                    <strong>Scelta Argomento:</strong>  Una volta scelto l'argomento verranno mostrate 10 domande a scelta multipla a cui dover rispondere.
+                    Concluse le domande verrà calcolato il punteggio relativo all'argomento scelto.
+                </div>
+            </div>
+
+            <div class="double_item">
+                <img src="immagini_aiuto/quiz_reset.png" alt="Immagine 8">
+                <div class="text">
+                    <strong>Pulsante Reset:</strong> Con questo pulsante si potranno resettare tutti i punteggi ottenuti.
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="immagini_aiuto/crediti.png" alt="Immagine 5">
+            <div class="text">
+                <strong>Pulsante Crediti:</strong> Visualizzazione e descrizione dei creatori del programma con i rispettivi ruoli.
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="immagini_aiuto/esci.png" alt="Immagine 6">
+            <div class="text">
+                <strong>Pulsante Esci:</strong> Questo pulsante chiuderà il programma facendoti uscire e tornare alla schermata di avvio.
+            </div>
+        </div>
+
+        <div class="item" id="double_item">
+            <div class="double_item">
+                <img src="immagini_aiuto/avanti.png" alt="Immagine 7">
+                <div class="text">
+                    <strong>Pulsante Avanti:</strong> Questo pulsante è presente solo all'interno delle varie slide.
+                    Posizionato in basso a destra ti da la possibilità di scorrere avanti tra le slide.
+                </div>
+            </div>
+
+            <div class="double_item">
+                <img src="immagini_aiuto/indietro.png" alt="Immagine 8">
+                <div class="text">
+                    <strong>Pulsante Indietro:</strong> Questo pulsante è presente solo all'interno delle varie slide.
+                    Posizionato in basso a sinistra ti da la possibilità di scorrere indietro tra le slide.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
