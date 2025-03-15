@@ -96,6 +96,8 @@
             text-decoration: none;
             transition: all 0.3s ease-in-out;
             box-shadow: 0 3px 10px rgba(255, 77, 109, 0.4);
+            cursor: pointer;
+            border: none;
         }
 
         .button:hover {
@@ -166,7 +168,16 @@
                 
             </div>
 
-            <a class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'slide_2.html');" target="content-frame">Inizia l'esplorazione 🚀</a>
+            <script>
+                fetch('sounds_h.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.body.insertAdjacentHTML("beforeend", data);
+                    });
+            </script>
+
+            <button class="button" onclick="location.href='Cellula/introduzione.html';">Inizia l'esplorazione 🚀</button>
+        
         </div>
 
         <!-- Sezione con illustrazione e vignetta -->
