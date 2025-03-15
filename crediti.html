@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crediti del Progetto</title>
+    <style>
+        /* Importazione font moderno */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* Stile generale */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74b9ff, #a29bfe);
+            color: #ffffff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Contenitore principale */
+        .container {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+            width: 90%;
+            max-width: 900px;
+            overflow-x: auto; /* Attiva lo scroll orizzontale */
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        /* Titolo */
+        h1 {
+            color: #74b9ff;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Contenitore delle card in orizzontale */
+        .partecipanti {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-start;
+            flex-wrap: nowrap; /* Impedisce il ritorno a capo */
+            padding: 20px;
+            overflow-x: auto; /* Impedisce la sparizione dei partecipanti con scroll orizzontale */
+        }
+
+        /* Stile card */
+        .partecipante {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        /* Effetto hover */
+        .partecipante:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.04);
+        }
+
+        /* Immagini */
+        .img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid #a29bfe;
+        }
+
+        /* Nome evidenziato */
+        .nome {
+            font-weight: bold;
+            font-size: 16px;
+            color: #a29bfe;
+        }
+
+        /* Ruolo */
+        .ruolo {
+            font-size: 14px;
+            color: #dfe6e9;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Crediti del Progetto</h1>
+
+        <div class="partecipanti">
+            <div class="partecipante">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mario Rossi" class="img">
+                <p class="nome">Mario Rossi</p>
+                <p class="ruolo">Frontend</p>
+            </div>
+
+            <div class="partecipante">
+                <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Giovanni Bianchi" class="img">
+                <p class="nome">Giovanni Bianchi</p>
+                <p class="ruolo">UX/UI Design</p>
+            </div>
+
+            <div class="partecipante">
+                <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="Luca Verdi" class="img">
+                <p class="nome">Luca Verdi</p>
+                <p class="ruolo">Backend</p>
+            </div>
+
+            <div class="partecipante">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Marco Neri" class="img">
+                <p class="nome">Marco Neri</p>
+                <p class="ruolo">Project Manager</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
