@@ -5,7 +5,7 @@ $(document).ready(function(){
         $(this).find('.dropdown').toggleClass('rotate');
     });
 
-    $(".enter_btn").on("click", function() {
+    $("#splash-enter-btn").on("click", function() {
         // Nascondi la splash screen
         $(".splash-screen").css({
             "opacity": "0",
@@ -38,27 +38,25 @@ $(document).ready(function(){
             });
         }, 500);
     });
+
+
+    // Animazione Splash Screen
+    const container = document.querySelector('.container');
+    const buttonContainer = document.querySelector('.splash-button-container');
+
+    // Add entrance animation
+    setTimeout(() => {
+        container.classList.add('visible');
+    }, 500);
+
+    // Add expansion animation
+    setTimeout(() => {
+        container.classList.add('expanded');
+    }, 1500);
+
+    // Show button after expansion animation
+    setTimeout(() => {
+        buttonContainer.classList.add('visible');
+    }, 2500);
  
 });
-
-/* 
-<script src="script.js"></script>   Dentro le slide o pagine con suoni
-
-// Function to play sound
-function playSound(soundFile) {
-    let audio = new Audio(soundFile);
-    audio.play();
-}
-
-
-modifiche bottoni:
-
-<button class="button" onclick="playSound('click-sound.mp3'); location.href='slide_5.html';">
-    Indietro
-</button>
-<button class="button" onclick="playSound('click-sound.mp3'); location.href='slide_7.html';">
-    Avanti
-</button>
-
-
-*/
