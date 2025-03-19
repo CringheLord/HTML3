@@ -19,10 +19,18 @@
             justify-content: flex-start;
         }
         .content{
+            /*text-align: start;
+            padding: 20px 20px 50px 20px;
+            flex-direction: row;
+            display: flex;*/
+
+            height: 100%;
             text-align: start;
             padding: 20px 20px 50px 20px;
             flex-direction: row;
             display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .image{
             text-align: start;
@@ -37,17 +45,24 @@
             flex: 50%;
         }
         .text{
+            /*text-align: start;
+            flex-direction: column;
+            display: flex;
+            flex: 50%;*/
+
+            height: 100%;
             text-align: start;
             flex-direction: column;
             display: flex;
             flex: 50%;
+            align-items: center;
+            justify-content: center;
         }
         .text p{
             margin-bottom: 0px;
             margin-top: 0px;
             font-size: 1.8rem;
             color: #333;
-            display: flex;
         }
         .image img {
             max-width: 70%;
@@ -63,8 +78,8 @@
         <div class="text">
             <p>
                 A destra passa solo sangue ricco di anidride carbonica, 
-                riceve dalle vene cave il sangue povero di ossigeno che dovrà andare ad ossigenarsi nei polmoni,
-                a sinistra solo sangue ricco di ossigeno, che proviene dai polmoni attraverso le vene polmonari e verrà distribuito a tutte le cellule.
+                riceve dalle <b style="color: red">vene cave</b> il sangue povero di ossigeno che dovrà andare ad ossigenarsi nei polmoni,
+                a sinistra solo sangue ricco di ossigeno, che proviene dai polmoni attraverso le <b style="color: red">vene polmonari</b> e verrà distribuito a tutte le cellule.
 
             </p>
             <br>
@@ -72,7 +87,7 @@
             <br>
             <br>
             <p>
-                Ciascuna metà a sua volta è divisa in due parti: una superiore, detta atrio e una inferiore, detta ventricolo.
+                Ciascuna metà a sua volta è divisa in due parti: una superiore, detta <b style="color: red">atrio</b> e una inferiore, detta <b style="color: red">ventricolo</b>.
                 La parte superiore comunica con quella inferiore attraverso delle valvole che permettono al sangue di andare solo dall'atrio al ventricolo e non viceversa.
             </p>
         </div>
@@ -92,7 +107,7 @@
     </script>
 
     <div class="buttons">
-        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'cuore.html');" target="content-frame">Indietro</button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'cuore_1.html');" target="content-frame">Indietro</button>
         <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'fine.html');" target="content-frame">Avanti</button>
     </div>
 
