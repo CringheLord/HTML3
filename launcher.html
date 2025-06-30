@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Launcher</title>
+  </head>
+  <body>
+    <button onclick="openApp()">Apri Applicazione</button>
+
+    <script>
+      function openApp() {
+        window.open(
+          "index.html",
+          "_blank",
+          "toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes," +
+            "width=" +
+            screen.availWidth +
+            ",height=" +
+            screen.availHeight +
+            ",left=0,top=0"
+        );
+      }
+    </script>
+  </body>
+</html>

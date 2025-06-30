@@ -1,141 +1,353 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Side Menu</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Css/all.min.css" />
     <script src="Jquery/jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Splash Screen -->
     <div class="splash-screen" id="splash">
-        <div class="title">IL CORPO UMANO</div>
-        <div class="container">
-            <div class="figure">
-                <img src="Splash Screen/scheletrico.png" alt="Sistema Scheletrico">
-            </div>
-            <div class="figure">
-                <img src="Splash Screen/nervoso.png" alt="Sistema Nervoso">
-            </div>
-            <div class="figure">
-                <img src="Splash Screen/circolatorio.png" alt="Sistema Circolatorio">
-            </div>
-            <div class="figure">
-                <img src="Splash Screen/respiratorio.png" alt="Sistema Respiratorio">
-            </div>
-            <div class="figure">
-                <img src="Splash Screen/digerente.png" alt="Sistema Digerente">
-            </div>
-            <div class="figure">
-                <img src="Splash Screen/muscolare.png" alt="Sistema Muscolare">
-            </div>
+      <div class="title">IL CORPO UMANO</div>
+      <div class="container">
+        <div class="figure">
+          <img src="Splash Screen/scheletrico.png" alt="Sistema Scheletrico" />
         </div>
-        <div class="splash-button-container">
-            <button class="button" id="splash-enter-btn">Inizia</button>
+        <div class="figure">
+          <img src="Splash Screen/nervoso.png" alt="Sistema Nervoso" />
         </div>
+        <div class="figure">
+          <img
+            src="Splash Screen/circolatorio.png"
+            alt="Sistema Circolatorio"
+          />
+        </div>
+        <div class="figure">
+          <img
+            src="Splash Screen/respiratorio.png"
+            alt="Sistema Respiratorio"
+          />
+        </div>
+        <div class="figure">
+          <img src="Splash Screen/digerente.png" alt="Sistema Digerente" />
+        </div>
+        <div class="figure">
+          <img src="Splash Screen/muscolare.png" alt="Sistema Muscolare" />
+        </div>
+      </div>
+      <div class="splash-button-container">
+        <button class="button" id="splash-enter-btn">Inizia</button>
+      </div>
     </div>
 
     <!-- Layout principale -->
     <div class="layout" id="main-layout">
-        <!-- Side Menu -->
-        <div class="side-bar">
-            <div class="menu-container">
-                <!-- Titolo MENU -->
-                <div class="menu-title">MENU</div>
+      <!-- Side Menu -->
+      <div class="side-bar">
+        <div class="menu-container">
+          <!-- Titolo MENU -->
+          <div class="menu-title">MENU</div>
 
-                <!-- Menu principale -->
-                <div class="menu">
-
-                    <div class="item"><a href="home.html" target="content-frame">Home</a></div>
-
-                    <div class="item">
-                        <a class="sub-btn">La Cellula<i class="fas fa-angle-right dropdown"></i></a>
-                        <div class="sub-menu">
-                            <a href="Cellula/introduzione.html" target="content-frame" class="sub-item">Introduzione</a>
-                            <a href="Cellula/slide_2.html" target="content-frame" class="sub-item">La Cellula</a>
-                            <a href="Cellula/slide_3.html" target="content-frame" class="sub-item">Gli Organelli</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <a class="sub-btn">Apparato Circolatorio<i class="fas fa-angle-right dropdown"></i></a>
-                        <div class="sub-menu">
-                            <a href="Apparato Circolatorio/introduzione1.html" target="content-frame" class="sub-item">Introduzione</a>
-                            <a href="Apparato Circolatorio/sangue.html" target="content-frame" class="sub-item">Il Sangue</a>
-                            <a href="Apparato Circolatorio/vasi_sanguigni.html" target="content-frame" class="sub-item">I Vasi Sanguigni</a>
-                            <a href="Apparato Circolatorio/cuore_1.html" target="content-frame" class="sub-item">Il Cuore (1)</a>
-                            <a href="Apparato Circolatorio/cuore_2.html" target="content-frame" class="sub-item">Il Cuore (2)</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <a class="sub-btn">Apparato Respiratorio<i class="fas fa-angle-right dropdown"></i></a>
-                        <div class="sub-menu">
-                            <a href="Respiratorio/Introduzione.html" target="content-frame" class="sub-item">Introduzione</a>
-                            <a href="Respiratorio/slide_2.html" target="content-frame" class="sub-item">La Respirazione</a>
-                            <a href="Respiratorio/slide_3.html" target="content-frame" class="sub-item">Apparato Respiratorio</a>
-                            <a href="Respiratorio/slide_4.html" target="content-frame" class="sub-item">Albero Bronchiale</a>
-                            <a href="Respiratorio/slide_5.html" target="content-frame" class="sub-item">Fasi Respirazione</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <a class="sub-btn">Sistema Nervoso<i class="fas fa-angle-right dropdown"></i></a>
-                        <div class="sub-menu">
-                            <a href="Sistema Nervoso/Introduzione.html" target="content-frame" class="sub-item">Introduzione</a>
-                            <a href="Sistema Nervoso/slide_2.html" target="content-frame" class="sub-item">I Due Sistemi</a>
-                            <a href="Sistema Nervoso/slide_3.html" target="content-frame" class="sub-item">Sistema Nervoso Centrale</a>
-                            <a href="Sistema Nervoso/slide_4.html" target="content-frame" class="sub-item">Encefalo</a>
-                            <a href="Sistema Nervoso/slide_5.html" target="content-frame" class="sub-item">Sistema Nervoso Periferico</a>
-                            <a href="Sistema Nervoso/slide_6.html" target="content-frame" class="sub-item">Sistema Nervoso</a>
-                            <a href="Sistema Nervoso/slide_7.html" target="content-frame" class="sub-item">Neuroni</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <a class="sub-btn">Apparato Locomotore<i class="fas fa-angle-right dropdown"></i></a>
-                        <div class="sub-menu">
-                            <a href="Motorio/introduzione.html" target="content-frame" class="sub-item">Introduzione</a>
-                            <a href="Motorio/slide_2.html" target="content-frame" class="sub-item">I Muscoli (1)</a>
-                            <a href="Motorio/slide_3.html" target="content-frame" class="sub-item">I Muscoli (2)</a>
-                            <a href="Motorio/slide_4.html" target="content-frame" class="sub-item">I Muscoli (3)</a>
-                            <a href="Motorio/slide_5.html" target="content-frame" class="sub-item">Lo Scheletro (1)</a>
-                            <a href="Motorio/slide_6.html" target="content-frame" class="sub-item">Lo Scheletro (2)</a>
-                            <a href="Motorio/slide_7.html" target="content-frame" class="sub-item">Le Ossa</a>
-                            <a href="Motorio/slide_8.html" target="content-frame" class="sub-item">Le Articolazioni</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <a class="sub-btn">Apparato Digerente<i class="fas fa-angle-right dropdown"></i></a>
-                        <div class="sub-menu">
-                            <a href="Apparato_Digerente/principale.html" target="content-frame" class="sub-item">Inizio</a>
-                            <a href="Apparato_Digerente/slide_2.html" target="content-frame" class="sub-item">Introduzione</a>
-                            <a href="Apparato_Digerente/slide_3.html" target="content-frame" class="sub-item">La Bocca e la Cavità Orale</a>
-                            <a href="Apparato_Digerente/slide_4.html" target="content-frame" class="sub-item">Faringe ed Esofago</a>
-                            <a href="Apparato_Digerente/slide_5.html" target="content-frame" class="sub-item">Lo Stomaco</a>
-                            <a href="Apparato_Digerente/slide_6.html" target="content-frame" class="sub-item">L'Intestino Tenue (1)</a>
-                            <a href="Apparato_Digerente/slide_7.html" target="content-frame" class="sub-item">L'Intestino Tenue (2)</a>
-                            <a href="Apparato_Digerente/slide_8.html" target="content-frame" class="sub-item">L'Intestino Crasso</a>
-                            <a href="Apparato_Digerente/slide_9.html" target="content-frame" class="sub-item">Fegato, Cistifelea e Pancreas</a>
-                        </div>
-                    </div>
-
-                    <div class="item"><a href="quiz.html" target="content-frame">Quiz</a></div>
-
-                </div>
-        
-                <!-- Sezione voci in basso -->
-                <div class="bottom-menu">
-                    <div class="item"><a href="aiuto.html" target="content-frame">Aiuto</a></div>
-                    <div class="item"><a href="crediti.html" target="content-frame">Crediti</a></div>
-                    <div class="item"><a href="#" class="exit-btn">Esci</a></div>
-                </div>
+          <!-- Menu principale -->
+          <div class="menu">
+            <div class="item">
+              <a href="home.html" target="content-frame">Home</a>
             </div>
-        </div>
-        
-        <!-- Contenuto principale -->
-        <iframe name="content-frame" class="main-content" src="home.html"></iframe>
-    </div>
 
-</body>
+            <div class="item">
+              <a class="sub-btn"
+                >La Cellula<i class="fas fa-angle-right dropdown"></i
+              ></a>
+              <div class="sub-menu">
+                <a
+                  href="Cellula/introduzione.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Introduzione</a
+                >
+                <a
+                  href="Cellula/slide_2.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >La Cellula</a
+                >
+                <a
+                  href="Cellula/slide_3.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Gli Organelli</a
+                >
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn"
+                >Apparato Circolatorio<i class="fas fa-angle-right dropdown"></i
+              ></a>
+              <div class="sub-menu">
+                <a
+                  href="Apparato Circolatorio/introduzione1.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Introduzione</a
+                >
+                <a
+                  href="Apparato Circolatorio/sangue.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Il Sangue</a
+                >
+                <a
+                  href="Apparato Circolatorio/vasi_sanguigni.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >I Vasi Sanguigni</a
+                >
+                <a
+                  href="Apparato Circolatorio/cuore_1.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Il Cuore (1)</a
+                >
+                <a
+                  href="Apparato Circolatorio/cuore_2.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Il Cuore (2)</a
+                >
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn"
+                >Apparato Respiratorio<i class="fas fa-angle-right dropdown"></i
+              ></a>
+              <div class="sub-menu">
+                <a
+                  href="Respiratorio/Introduzione.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Introduzione</a
+                >
+                <a
+                  href="Respiratorio/slide_2.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >La Respirazione</a
+                >
+                <a
+                  href="Respiratorio/slide_3.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Apparato Respiratorio</a
+                >
+                <a
+                  href="Respiratorio/slide_4.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Albero Bronchiale</a
+                >
+                <a
+                  href="Respiratorio/slide_5.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Fasi Respirazione</a
+                >
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn"
+                >Sistema Nervoso<i class="fas fa-angle-right dropdown"></i
+              ></a>
+              <div class="sub-menu">
+                <a
+                  href="Sistema Nervoso/Introduzione.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Introduzione</a
+                >
+                <a
+                  href="Sistema Nervoso/slide_2.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >I Due Sistemi</a
+                >
+                <a
+                  href="Sistema Nervoso/slide_3.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Sistema Nervoso Centrale</a
+                >
+                <a
+                  href="Sistema Nervoso/slide_4.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Encefalo</a
+                >
+                <a
+                  href="Sistema Nervoso/slide_5.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Sistema Nervoso Periferico</a
+                >
+                <a
+                  href="Sistema Nervoso/slide_6.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Sistema Nervoso</a
+                >
+                <a
+                  href="Sistema Nervoso/slide_7.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Neuroni</a
+                >
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn"
+                >Apparato Locomotore<i class="fas fa-angle-right dropdown"></i
+              ></a>
+              <div class="sub-menu">
+                <a
+                  href="Motorio/introduzione.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Introduzione</a
+                >
+                <a
+                  href="Motorio/slide_2.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >I Muscoli (1)</a
+                >
+                <a
+                  href="Motorio/slide_3.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >I Muscoli (2)</a
+                >
+                <a
+                  href="Motorio/slide_4.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >I Muscoli (3)</a
+                >
+                <a
+                  href="Motorio/slide_5.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Lo Scheletro (1)</a
+                >
+                <a
+                  href="Motorio/slide_6.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Lo Scheletro (2)</a
+                >
+                <a
+                  href="Motorio/slide_7.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Le Ossa</a
+                >
+                <a
+                  href="Motorio/slide_8.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Le Articolazioni</a
+                >
+              </div>
+            </div>
+            <div class="item">
+              <a class="sub-btn"
+                >Apparato Digerente<i class="fas fa-angle-right dropdown"></i
+              ></a>
+              <div class="sub-menu">
+                <a
+                  href="Apparato_Digerente/principale.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Inizio</a
+                >
+                <a
+                  href="Apparato_Digerente/slide_2.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Introduzione</a
+                >
+                <a
+                  href="Apparato_Digerente/slide_3.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >La Bocca e la Cavità Orale</a
+                >
+                <a
+                  href="Apparato_Digerente/slide_4.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Faringe ed Esofago</a
+                >
+                <a
+                  href="Apparato_Digerente/slide_5.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Lo Stomaco</a
+                >
+                <a
+                  href="Apparato_Digerente/slide_6.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >L'Intestino Tenue (1)</a
+                >
+                <a
+                  href="Apparato_Digerente/slide_7.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >L'Intestino Tenue (2)</a
+                >
+                <a
+                  href="Apparato_Digerente/slide_8.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >L'Intestino Crasso</a
+                >
+                <a
+                  href="Apparato_Digerente/slide_9.html"
+                  target="content-frame"
+                  class="sub-item"
+                  >Fegato, Cistifelea e Pancreas</a
+                >
+              </div>
+            </div>
+
+            <div class="item">
+              <a href="quiz.html" target="content-frame">Quiz</a>
+            </div>
+          </div>
+
+          <!-- Sezione voci in basso -->
+          <div class="bottom-menu">
+            <div class="item">
+              <a href="aiuto.html" target="content-frame">Aiuto</a>
+            </div>
+            <div class="item">
+              <a href="crediti.html" target="content-frame">Crediti</a>
+            </div>
+            <div class="item"><a href="#" class="exit-btn">Esci</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenuto principale -->
+      <iframe
+        name="content-frame"
+        class="main-content"
+        src="home.html"
+      ></iframe>
+    </div>
+  </body>
 </html>
