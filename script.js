@@ -101,9 +101,9 @@ $(document).ready(function () {
 });
 
 //FUNCTION OPEN BUTTON
-$(document).ready(function () {
+/*$(document).ready(function () {
   $(".exit-btn").on("click", function (e) {
     e.preventDefault();
     window.close();
   });
-});
+});*/
