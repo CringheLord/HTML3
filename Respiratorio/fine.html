@@ -75,7 +75,6 @@
 <body>
 
 
-
     <script>
         fetch('../sounds_h.html')
             .then(response => response.text())
@@ -83,13 +82,10 @@
                 document.body.insertAdjacentHTML("beforeend", data);
             });
     </script>
-
     <audio id="soundCheer" autoplay>
         <source src="../Sounds/crowd_cheer_cut.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
-    </audio>
-    
-    
+    </audio>        
     
 
     <!-- Navigation Buttons -->
@@ -97,7 +93,7 @@
         <button class="button pulsate" style="visibility: hidden;" onclick="playAudio(); location.href='slide_2.html';" target="content-frame">
             Indietro
         </button>
-        <button class="button pulsate" onclick="playSoundAndNavigate('SoundSlideButt', '../Sistema Nervoso/Introduzione.html');" target="content-frame">
+        <button class="button pulsate" onclick="playSoundAndNavigate('SoundSlideButt', '../Sistema Nervoso/introduzione.html');" target="content-frame">
             Prossimo Argomento
         </button>
     </div>

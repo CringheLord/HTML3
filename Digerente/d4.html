@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo Stomaco</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #000000;
+            line-height: 1.6;
+            background: url('sd.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 10px 0px 10px;
+            margin: 0;
+            flex-direction: column;
+        }
+        .main-container {
+            /*background-color: #fff;*/
+            border-radius: 8px;
+            /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .sub-container1-text{
+            text-align: start;
+            flex-direction: column;
+            display: flex;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            color: black;
+        }
+        .sub-container1-text p{
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: clamp(16px, 1.5vw + 0.5rem, 24px);
+            padding-left: 20px;
+        }
+        .sub-container1-text ul {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: clamp(16px, 1.5vw + 0.5rem, 24px);
+        }
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .header img {
+            /*max-width: 90%;*/
+            height: auto;
+            border-radius: 8px;
+            width: 8vw;
+        }
+        .header h1 {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            color: rgb(228, 108, 10);
+            padding-left: 20px;
+            font-size: xxx-large;
+        }
+        .sub-container1-img {
+            text-align: start;
+            padding: 20px 20px 0px 20px;
+            flex-direction: row;
+            display: flex;
+
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            align-items: center;
+            flex: 100%;
+        }
+        .sub-container1-img img {
+            /*max-width: 90%;*/
+            height: auto;
+            border-radius: 8px;
+            width: 35vw;
+        }
+        .buttons {
+            position: fixed;
+            bottom: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #900000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #b00000;
+        }
+        .buttons button:nth-child(1) {
+            transform: translateX(30px);
+        }
+        .buttons button:nth-child(1):hover {
+            transform: translateX(30px) scale(1.05);
+        }
+        .buttons button:nth-child(2) {
+            transform: translateX(-30px);
+        }
+        .buttons button:nth-child(2):hover {
+            transform: translateX(-30px) scale(1.05);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="container1">
+
+            <div class="sub-container1-text">
+
+                <div class="header">
+
+                    <img src="stomaco.png" alt="stomaco">
+
+                    <h1>Lo<br>
+                    Stomaco</h1>
+
+                </div>
+                <br>
+                <p>
+                    Lo stomaco è un organo muscolare a forma di sacco, che mescola in continuazione il cibo (bolo) 
+                    con i <b style="color: rgb(114, 161, 62);">succhi gastrici</b>, grazie ai <u>muscoli involontari</u> delle sue pareti.
+                </p>
+                <br>
+                <p>
+                    Questi potenti <b style="color: rgb(114, 161, 62);">succhi gastrici</b> (<b>acidi ed enzimi</b>), prodotti dalle numerose ghiandole all'interno dello stomaco, 
+                    trasformano il bolo in una poltiglia semi-liquida chiamata <b style="color: rgb(128, 63, 177);">chimo</b>.
+                </p>
+                <br>
+                <p>
+                    Dallo stomaco, il chimo passa nell'<b style="color: rgb(134, 74, 180);">intestino</b>, un tubo lungo e contorto, diviso in due parti:
+                </p>
+                <ul>
+                    <li style="color: rgb(119, 0, 255);">
+                        l'intestino tenue;
+                    </li>
+                    <li style="color: rgb(119, 0, 255);">
+                        E l'intestino crasso;
+                    </li>
+                </ul>
+                
+            </div>
+
+            <div class="sub-container1-img">
+
+                <img src="image3.png" alt="Esofago">
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        fetch('../sounds_h.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'd3.html');" target="content-frame">
+            Indietro
+        </button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'd5.html');" target="content-frame">
+            Avanti
+        </button>
+    </div>
+
+    <script src="../playAudio.js"></script>
+
+
+</body>
+</html>

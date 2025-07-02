@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Nervoso Periferico</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: url('ns.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 10px 0px 10px;
+            margin: 0;
+            flex-direction: column;
+        }
+        .main-container {
+            /*background-color: #fff;*/
+            border-radius: 8px;
+            /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /*margin-top: 10%;*/
+        }
+        .sub-container1-text{
+            text-align: start;
+            flex-direction: column;
+            display: flex;
+            margin-top: 20%;
+            margin-bottom: 8%;
+            align-items: center;
+            justify-content: center;
+        }
+        .row1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .row1 p{
+            margin-bottom: 2%;
+            margin-top: 3%;
+            font-size: clamp(15px, 1.5vw + 0.5rem, 18px);
+            margin-left: 15%;
+            margin-right: 15%;
+            color: white;
+        }
+        .row2 {
+            border: 5px solid #deb40c;
+            width: 68vw;
+            background-color: rgba(255, 208, 0, 0.295);
+            color: black;
+        }
+        .row2 p {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: clamp(15px, 1.5vw + 0.5rem, 18px);
+            padding-left: 20px;
+        }
+        .row2 ul {
+            margin-bottom: 2%;
+            margin-top: 0px;
+            font-size: clamp(15px, 1.5vw + 0.5rem, 18px);
+        }
+        .sub-container1-img {
+            text-align: start;
+            padding: 10px 10px 0px 10px;
+            flex-direction: row;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            flex: 100%;
+        }
+        .sub-container1-img p {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: clamp(15px, 1.5vw + 0.5rem, 18px);
+            /*padding-left: 20px;*/
+        }
+        .sub-container1-img img {
+            /*max-width: 90%;*/
+            height: auto;
+            border-radius: 8px;
+            width: 32vw;
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .text h2 {
+            color: black;
+            margin-top: 0px;
+        }
+        .buttons {
+            position: fixed;
+            bottom: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #900000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #b00000;
+        }
+        .buttons button:nth-child(1) {
+            transform: translateX(30px);
+        }
+        .buttons button:nth-child(1):hover {
+            transform: translateX(30px) scale(1.05);
+        }
+        .buttons button:nth-child(2) {
+            transform: translateX(-30px);
+        }
+        .buttons button:nth-child(2):hover {
+            transform: translateX(-30px) scale(1.05);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="container1">
+
+            <div class="sub-container1-text">
+
+                <div class="row1">
+
+                    <p>
+                        Il <b style="color: rgb(255, 0, 0)">sistema nervoso periferico</b> è la parte del sistema nervoso formata da nervi, 
+                        che collega il <b>sistema nervoso centrale</b> ai vari organi del nostro corpo e che comprende a sua volta 
+                        il <b>sistema nervoso vegetativo</b> o autonomo.
+                    </p>
+
+                </div>
+
+                <div class="row2">
+
+                    <div class="sub-container1-img">
+
+                        <div class="text">
+
+                            <h2>I Nervi</h2>
+                            <p>
+                                I <b style="color: rgb(136, 88, 16);">nervi</b> trasportano gli impulsi dal sistema nervoso centrale agli organi di senso e ai muscoli scheletrici, 
+                                che sono sotto il controllo volontario.
+                                Mentre, i nervi che trasportano gli impulsi provenienti dagli organi come, cuore, stomaco, polmoni, ecc; 
+                                funzionano indipendentemente dalla nostra volontà.
+                            </p>
+
+                        </div>
+
+                        <img src="nervi.png" alt="Rappresentazione dei nervi">
+
+                    </div>
+
+                    <p>
+                        I <b style="color: rgb(136, 88, 16);">nervi</b> possono essere:
+                    </p>
+                    <ul>
+                        <li>
+                            <b><u>Cranici</u></b>: partono dall'encefalo e raggiungono i vari organi della testa; si dividono in:
+                            <ul>
+                                <li>
+                                    nervi motori : trasmettono gli impulsi ai muscoli
+                                </li>
+                                <li>
+                                    nervi sensori : trasmettono al cervello gli impulsi degli organi di senso
+                                </li>
+                                <li>
+                                    nervi misti : trasmettono sia impulsi motori che sensori
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b><u>Spinali</u></b>: sono tutti quei nervi che nascono dal midollo spinale e si dirigono verso un braccio, 
+                            verso l'altro, uno a sinistra e uno a destra e si dirigono verso il torace, l'addome e gli arti. 
+                            Essi trasmettono gli impulsi in arrivo dalla periferia al sistema nervoso centrale e viceversa.
+                        </li>
+                    </ul>
+
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        fetch('../sounds_h.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'n3.html');" target="content-frame">
+            Indietro
+        </button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'n5.html');" target="content-frame">
+            Avanti
+        </button>
+    </div>
+
+    <script src="../playAudio.js"></script>
+
+
+</body>
+</html>

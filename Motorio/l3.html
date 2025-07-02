@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Muscoli</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: rgb(210, 202, 199);
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 10px 0px 10px;
+            margin: 0;
+            flex-direction: column;
+        }
+        .main-container {
+            /*background-color: #fff;*/
+            border-radius: 8px;
+            /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            /*justify-content: center;*/
+            align-items: center;
+        }
+        .container1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .sub-container1-text{
+            text-align: start;
+            flex-direction: column;
+            display: flex;
+            /*margin-top: 10%;*/
+        }
+        .sub-container1-text h1 {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            color: #dc0000;
+            padding-left: 20px;
+        }
+        .sub-container1-text h2 {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            padding-left: 20px;
+        }
+        .sub-container1-text p{
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: clamp(16px, 1.5vw + 0.5rem, 24px);
+            color: #333;
+            padding-left: 20px;
+        }
+        .sub-container1-img {
+            text-align: start;
+            padding: 20px 20px 0px 20px;
+            flex-direction: row;
+            display: flex;
+
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            align-items: center;
+            flex: 100%;
+        }
+        .sub-container1-img img {
+            /*max-width: 90%;*/
+            width: 32vw;
+            height: auto;
+            border-radius: 8px;
+        }
+        .container2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+        }
+        .container2 p{
+            font-size: clamp(16px, 1.5vw + 0.5rem, 24px);
+            margin-top: 10%;
+        }
+        .sub-container2-img {
+            text-align: start;
+            padding: 20px 20px 0px 20px;
+            flex-direction: row;
+            display: flex;
+
+            justify-content: center;
+            margin-bottom: 10%;
+            align-items: center;
+            flex: 100%;
+        }
+        .sub-container2-img img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .sub-container2-text {
+            text-align: start;
+            flex-direction: column;
+            display: flex;
+            margin-bottom: 10%;
+        }
+        .border {
+            border: 3px solid #01e1ff;   /* spessore, stile, colore */
+            padding: 10px;            /* spazio interno */
+            display: inline-block;    /* per adattare al contenuto */
+            border-radius: 20px;       /* angoli arrotondati (opzionale) */
+            background-color: #f9f9f9; /* sfondo (opzionale) */
+        }
+        .border p {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: clamp(16px, 1.5vw + 0.5rem, 24px);
+            color: #333;
+        }
+        .border h2 {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            color: #ff0000;
+        }
+        .buttons {
+            position: fixed;
+            bottom: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #900000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #b00000;
+        }
+        .buttons button:nth-child(1) {
+            transform: translateX(30px);
+        }
+        .buttons button:nth-child(1):hover {
+            transform: translateX(30px) scale(1.05);
+        }
+        .buttons button:nth-child(2) {
+            transform: translateX(-30px);
+        }
+        .buttons button:nth-child(2):hover {
+            transform: translateX(-30px) scale(1.05);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="container1">
+
+            <div class="sub-container1-text">
+
+                <h1>APPROFONDIMENTO:</h1>
+                <h2>Muscoli antagonisti ed energia muscolare</h2>
+                <br>
+                <p>
+                    Molti muscoli volontari, come quelli delle braccia e delle gambe, lavorano in coppia:
+                    quando un muscolo si contrae l'altro si distende, e viceversa.
+                    Questi tipi di muscoli, che permettono movimenti opposti, sono detti <b style="color: rgb(13, 148, 19)">antagonisti</b>.
+
+                </p>
+                <br>
+                <br>
+                <p>
+                    Ad esempio se <b>solleviamo il braccio</b> verso la spalla il <b>bicipite si contrae</b>, si accorcia e fa muovere l'osso collegato,
+                    tirandolo verso di sé. Contemporaneamente il <b>tricipite si rilassa</b>.
+                    Se <b>abbassiamo il braccio avviene il contrario</b>. Proprio perché nel movimento il bicipite e il tricipite
+                    compiono azioni contrarie si dicono muscoli antagonisti.
+                </p>
+
+            </div>
+
+            <div class="sub-container1-img">
+
+                <img src="image4.png" alt="Contrazione e flessione">
+
+            </div>
+
+        </div>
+        <div class="container2">
+
+            <div class="sub-container2-img">
+
+                <img src="muscoletto.png" alt="Muscoletto">
+
+            </div>
+
+            <div class="sub-container2-text">
+
+                <div class="border">
+
+                    <h2>ATTENZIONE!</h2>
+                    <p>
+                        I muscoli per funzionare <b><u>necessitano di energia</u></b>, che ricavano dalla degli alimenti,
+                        in particolare dagli <u>zuccheri e dall'ossigeno</u>.
+                        I tessuti muscolari sono attraversati da vasi sanguigni e il sangue, infatti,
+                        ha il compito di rifornire le fibre muscolari di nutrimento, ossigeno e di portare via l'anidride carbonica.
+                        Se durante il movimento i muscoli non ricevono abbastanza ossigeno, si produce acido lattico,
+                        che causa indolenzimento.<br>
+                        <b style="color: rgb(140, 27, 206)">Per questo è importante la respirazione quando si pratica sport.</b>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        fetch('../sounds_h.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'l2.html');" target="content-frame">
+            Indietro
+        </button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'l4.html');" target="content-frame">
+            Avanti
+        </button>
+    </div>
+
+    <script src="../playAudio.js"></script>
+
+
+
+</body>
+</html>

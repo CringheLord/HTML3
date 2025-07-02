@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            background: url('ls.png') no-repeat center center fixed;
+            background: url('sfondo_intro.png') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             flex-direction: column;
@@ -25,20 +25,6 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-        }
-        .title {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
-        .title h1 {
-            font-size: 3rem;
-        }
-        .title p {
-            font-size: clamp(10px, 1.5vw + 0.5rem, 22px);
-        }
-        .title ul {
-            font-size: clamp(10px, 1.5vw + 0.5rem, 22px);
         }
         .buttons {
             position: fixed;
@@ -68,23 +54,6 @@
 </head>
 <body>
     <div class="container">
-        <div class="title">
-            <h1>Apparato<br>
-                Locomotore
-            </h1>
-
-            <p>
-                Il <span style="color: rgb(111, 0, 255);"><u>corpo umano</u></span> non sarebbe capace di compiere<br>
-                alcun movimento se non ci fosse l'azione congiunta:
-            </p>
-            <ul>
-                <li>dei <span style="color: rgb(226, 5, 5);"><u>muscoli</u></span>;</li>
-                <li>dello <span style="color: rgb(70, 173, 49);"><u>scheletro</u></span>;</li>
-                <li>delle <span style="color: rgb(0, 140, 255);"><u>articolazioni</u></span>;</li>
-            </ul>
-        </div>
-
-
 
         <script>
             fetch('../sounds_h.html')
@@ -97,7 +66,7 @@
 
         <!-- Navigation Buttons -->
         <div class="buttons">
-            <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'l1.html');" target="content-frame">
+            <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'd1.html');" target="content-frame">
                 Avanti
             </button>
         </div>

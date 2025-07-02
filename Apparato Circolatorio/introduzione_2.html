@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Sangue</title>
+    <title>Introduzione</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
         }
         .content {
             text-align: start;
@@ -27,14 +27,31 @@
             margin-top: 0px;
             /*font-size: 2rem;*/
             font-size: clamp(16px, 1.5vw + 0.5rem, 24px);
+            text-align: center;
         }
-        .content ul {
-            margin-top: 0px;
+        .image-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8vw;
+            flex-wrap: nowrap;
+            max-height: 35vh;
+            text-align: center;
+        }
+        .image-row img {
+            width: 20vw;
+            max-width: 210px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+        }
+        .image-row p{
+            /*font-size: 2vw; /* Testo adattivo */
             font-size: clamp(16px, 1.5vw + 0.5rem, 24px);
-            /*font-size: 2rem;*/
-            margin-bottom: 5%;
+            margin-top: 2%;
         }
-        .content .image-row {
+        /*.content .image-row {
             display: flex;
             justify-content: center;
             margin-top: 10px;
@@ -46,7 +63,7 @@
             max-width: 25rem;
             height: auto;
             border-radius: 8px;
-        }
+        }*/
         .content .text-row {
             display: flex;
             justify-content: center;
@@ -108,37 +125,34 @@
 <body>
     <div class="content">
         <p>
-            Il <b>sangue</b> è un tessuto connettivo liquido che circola nel nostro corpo attraverso i vasi sanguigni. 
-            E' formato per il circa 55% da una parte liquida chiamata <b>plasma</b> (liquido giallo paglierino formato soprattutto da acqua e sostanze nutritive)
-            e per il restante 45% da una parte corpuscolata formata dai <span style="color: rgb(255, 0, 0);">globuli rossi</span>, 
-            <span style="color: rgb(255, 255, 255);">globuli bianchi</span> e le <span style="color: rgb(255, 153, 0);">piastrine</span>.
-
+            Per funzionare ogni macchina, e quindi anche l'uomo, ha bisogno di carburante 
+            da cui riceve energia e ha bisogno di eliminare le sostanze di scarto. 
+            Ovviamente anche <u>tutte le cellule</u> del nostro organismo hanno bisogno di 
+            sostanze nutritive ed ossigeno e devono eliminare le sostanze di rifiuto. 
+            Tutto ciò è svolto dall'<b>apparato circolatorio</b>.
         </p>
         <br>
-        <div class="image-row">
-            <img src="img1.png" alt="immagine sangue" class="sangue-image">
-            
-            <div class="text-row">
-                <p>Globuli<br>
-                    Bianchi</p>
-                <p>Piastrine</p>
-                <p>Globuli<br>
-                    Rossi</p>
-            </div>
-        </div>
-        
         <br>
         <p>
-            La funzioni principali del sangue sono:
+            L'apparato cardiocircolatorio è formato da:
         </p>
         <br>
-        <ul>
-            <li>distribuzione di nutrienti e di ossigeno alle cellule;</li>
-            <li>prelievo di sostanze non più utili all'organismo e trasporto agli organi deputati alla loro eliminazione;</li>
-            <li>trasporto di sostanze importanti, come gli ormoni, gli anticorpi ed altre sostanze.</li>
-        </ul>
+        <br>
+        <div class="image-row">
+                <div>
+                    <img src="sangue.png" alt="immagine sangue">
+                    <p><b>Il Sangue</b></p>
+                </div>
+                <div>
+                    <img src="vasi.png" alt="immagine vasi">
+                    <p><b>I Vasi Sanguigni</b></p>
+                </div>
+                <div>
+                    <img src="cuore1.png" alt="immagine cuore">
+                    <p><b>Il Cuore</b></p>
+                </div>
+            </div>
     </div>
-
 
 
     <script>
@@ -152,10 +166,10 @@
 
     <!-- Navigation Buttons -->
     <div class="buttons">
-        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'introduzione_2.html');" target="content-frame">
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'introduzione_1.html');" target="content-frame">
             Indietro
         </button>
-        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'vasi_sanguigni.html');" target="content-frame">
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'sangue.html');" target="content-frame">
             Avanti
         </button>
     </div>
@@ -164,3 +178,4 @@
     
 </body>
 </html>
+

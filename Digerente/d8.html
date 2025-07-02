@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fegato, Cistifellea e Pancreas</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: url('sd.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 10px 0px 10px;
+            margin: 0;
+            flex-direction: column;
+        }
+        .main-container {
+            /*background-color: #fff;*/
+            border-radius: 8px;
+            /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            /*justify-content: center;*/
+            align-items: center;
+            color: black;
+        }
+        .main-container h1 {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            padding-left: 20px;
+        }
+        .container1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .sub-container1-text{
+            text-align: start;
+            flex-direction: column;
+            display: flex;
+            /*margin-top: 10%;*/
+        }
+        .sub-container1-text h2 {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            padding-left: 20px;
+        }
+        .sub-container1-text p{
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: clamp(15px, 1.5vw + 0.5rem, 22px);
+            padding-left: 20px;
+        }
+        .sub-container1-img {
+            text-align: start;
+            padding: 20px 20px 0px 20px;
+            flex-direction: row;
+            display: flex;
+
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            align-items: center;
+            /*flex: 100%;*/
+        }
+        .sub-container1-img img {
+            /*max-width: 90%;*/
+            width: 16vw;
+            height: auto;
+            border-radius: 8px;
+        }
+        .container2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            /*margin-top: 2%;*/
+        }
+        .container2 p{
+            font-size: clamp(15px, 1.5vw + 0.5rem, 22px);
+            margin-top: 10%;
+        }
+        .container2 img {
+            /*max-width: 90%;*/
+            height: auto;
+            border-radius: 8px;
+            width: 20vw;
+        }
+        .sub-container2-img {
+            text-align: start;
+            padding: 20px 20px 0px 20px;
+            flex-direction: row;
+            display: flex;
+
+            justify-content: center;
+            margin-bottom: 5%;
+            align-items: center;
+            /*flex: 100%;*/
+        }
+        .sub-container2-img img {
+            /*max-width: 90%;*/
+            height: auto;
+            border-radius: 8px;
+            width: 20vw;
+        }
+        .sub-container2-text {
+            text-align: start;
+            flex-direction: column;
+            display: flex;
+            margin-bottom: 4%;
+        }
+        .sub-container2-text ul {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: clamp(15px, 1.5vw + 0.5rem, 22px);
+        }
+        .border1 {
+            border: 2px dotted rgb(218, 94, 121);   /* spessore, stile, colore */
+            padding: 10px;            /* spazio interno */
+            display: inline-block;    /* per adattare al contenuto */
+            border-radius: 20px;       /* angoli arrotondati (opzionale) */
+            background-color: rgba(232, 167, 181, 0.808); /* sfondo (opzionale) */
+        }
+        .border1 p {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: clamp(15px, 1.5vw + 0.5rem, 22px);
+        }
+        .border2 {
+            border: 2px solid  rgb(255, 255, 0);   /* spessore, stile, colore */
+            padding: 10px;            /* spazio interno */
+            display: inline-block;    /* per adattare al contenuto */
+            border-radius: 20px;       /* angoli arrotondati (opzionale) */
+            background-color: rgba(209, 185, 111, 0.808); /* sfondo (opzionale) */
+        }
+        .border2 p {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: clamp(15px, 1.5vw + 0.5rem, 22px);
+        }
+        .container3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .sub-container3-img {
+            text-align: start;
+            /*padding: 20px 20px 0px 20px;*/
+            flex-direction: row;
+            display: flex;
+
+            justify-content: center;
+            margin-bottom: 14%;
+            align-items: center;
+            /*flex: 100%;*/
+        }
+        .sub-container3-img img {
+            /*max-width: 90%;*/
+            height: auto;
+            border-radius: 8px;
+            width: 26vw;
+        }
+        .buttons {
+            position: fixed;
+            bottom: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #900000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #b00000;
+        }
+        .buttons button:nth-child(1) {
+            transform: translateX(30px);
+        }
+        .buttons button:nth-child(1):hover {
+            transform: translateX(30px) scale(1.05);
+        }
+        .buttons button:nth-child(2) {
+            transform: translateX(-30px);
+        }
+        .buttons button:nth-child(2):hover {
+            transform: translateX(-30px) scale(1.05);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="main-container">
+
+        <h1><b style="color: rgb(192, 80, 77);">Fegato</b>, <b style="color: rgb(15, 111, 57);">Cistifellea</b> e <b style="color: rgb(228, 175, 2);">Pancreas</b> più in dettaglio…</h1>
+
+        <div class="container1">
+
+            <div class="sub-container1-img">
+
+                <img src="fegato.png" alt="Fegato">
+
+            </div>
+
+            <div class="sub-container1-text">
+
+                <div class="border1">
+
+                    <p>
+                        Il <b style="color: rgb(192, 80, 77);"><u>fegato</u></b> è uno degli organi più importanti del sistema digerente: <b>produce la</b> <b style="color: rgb(255, 8, 0);">bile</b>, 
+                        una sostanza fondamentale per l'<b>emulsione dei grassi</b>, permettendo la loro digestione nel tratto intestinale.
+                        La <b style="color: rgb(15, 111, 57);">cistifellea</b>, situata sotto il fegato, ha il compito di <b>immagazzinare</b> e <b>concentrare</b> la bile prodotta, 
+                        rilasciandola nel momento in cui il cibo entra nel duodeno, la prima parte dell'intestino tenue.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container2">
+            
+
+            <div class="sub-container2-text">
+
+                <div class="border2">
+
+                    <p>
+                        Il <b style="color: rgb(189, 150, 25);"><u>pancreas</u></b>, invece, è una ghiandola che svolge una duplice funzione.
+                        Da un lato, secerne enzimi digestivi come:
+                    </p>
+                    <ul>
+                        <li>
+                            la <b style="color: rgb(235, 231, 38);"><u>lipasi</u></b> (per i grassi);
+                        </li>
+                        <li>
+                            l'<b style="color: rgb(255, 255, 255);">amilasi</b> (per i carboidrati);
+                        </li>
+                        <li>
+                            e le <b style="color: rgb(218, 132, 20);">proteasi</b> (per le proteine).
+                        </li>
+                    </ul>
+                    <p>
+                        Questi enzimi sono fondamentali per completare il processo digestivo nel <b>duodeno</b>.
+                        Dall'altro lato, il pancreas svolge anche una funzione endocrina, 
+                        regolando i livelli di <b style="color: rgb(255, 255, 255);">zucchero</b> nel sangue attraverso la produzione di <b><u>insulina e glucagone</u></b>.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="sub-container2-img">
+
+                <img src="pancreas.png" alt="Pancreas">
+
+            </div>
+
+        </div>
+
+        
+        <div class="container3">
+
+            <div class="sub-container3-img">
+
+                <img src="image9_2.png" alt="Fegato,Cistifellea e Pancreas">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        fetch('../sounds_h.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'd7.html');" target="content-frame">
+            Indietro
+        </button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'fine.html');" target="content-frame">
+            Avanti
+        </button>
+    </div>
+
+    <script src="../playAudio.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Respirazione</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #333;
+            line-height: 1.6;
+            /*background-color: #f9f9f9;*/
+            background: url('sfondo_respiratorio.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 10px 0px 10px;
+            margin: 0;
+            flex-direction: column;
+        }
+        .main-container {
+            /*background-color: #fff;*/
+            border-radius: 8px;
+            /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            /*justify-content: center;*/
+            align-items: center;
+        }
+        .container1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .sub-container1-text{
+            text-align: start;
+            flex-direction: column;
+            display: flex;
+        }
+        .sub-container1-text p{
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: clamp(16px, 1.5vw + 0.5rem, 24px);
+            color: #333;
+            padding-left: 20px;
+        }
+        .sub-container1-img{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .container2 p{
+            font-size: clamp(16px, 1.5vw + 0.5rem, 24px);
+            margin-top: 10%;
+        }
+        h1 {
+            color: #0e2bcc; /* Darker green for title */
+            /*padding-bottom: 10px;
+            margin-bottom: 20px;*/
+            padding-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+        h2 {
+            color: #000000; /* Slightly lighter green for section titles */
+            margin-top: 40px;
+            padding-left: 20px;
+            margin-bottom: 0px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            /*margin-bottom: 10px;*/
+            padding-left: 20px;
+            position: relative;
+            font-size: clamp(16px, 1.5vw + 0.5rem, 24px);
+        }
+        .sub-container1-img {
+            text-align: start;
+            padding: 20px 20px 0px 20px;
+            flex-direction: row;
+            display: flex;
+
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            align-items: center;
+            flex: 100%;
+        }
+        .sub-container1-img img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .buttons {
+            position: fixed;
+            bottom: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #900000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #b00000;
+        }
+        .buttons button:nth-child(1) {
+            transform: translateX(30px);
+        }
+        .buttons button:nth-child(1):hover {
+            transform: translateX(30px) scale(1.05);
+        }
+        .buttons button:nth-child(2) {
+            transform: translateX(-30px);
+        }
+        .buttons button:nth-child(2):hover {
+            transform: translateX(-30px) scale(1.05);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="container1">
+
+            <div class="sub-container1-text">
+
+                <h1>RESPIRAZIONE</h1>
+                <br>
+                <p>La respirazione è la funzione che serve a far entrare nel nostro corpo l'ossigeno necessario alle cellule per poter demolire le sostanze nutritive e per ricavarne energia indispensabile per vivere.</p>
+
+                <h2>Le fasi della respirazione sono tre:</h2>
+                <ul>
+                    <li><b style="color: rgb(255, 0, 0)"><u>la respirazione esterna o polmonare:</u></b> Questo processo, regola l'entrata e l'uscita dell'aria nel nostro corpo grazie all'inspirazione e l'espirazione;</li>
+                    <br>
+                    <li><b style="color: blue"><u>lo scambio di gas:</u></b> L'ossigeno una volta arrivato nei polmoni, viene prelevato dai globuli rossi del sangue e portato in tutto il corpo. L'anidride carbonica, invece, passa dalle cellule al sangue e dal sangue ai polmoni per poi essere espulsa;</li>
+                    <br>
+                    <li><b style="color: rgb(140, 14, 172)"><u>la respirazione interna o cellulare:</u></b> Avviene all'interno delle cellule, e grazie all'ossigeno permette di ricavare, dal cibo, l'energia necessaria per vivere.</li>
+                </ul>
+
+            </div>
+
+            <div class="sub-container1-img">
+
+                <img src="Respirazione.png" alt="Diagramma della Respirazione">
+
+            </div>
+
+        </div>
+        <div class="container2">
+
+            <p><b style="color: rgb(255, 255, 255)"><u>Seguiamo ora l'aria che respiriamo nel suo percorso verso i polmoni</u></b></p>
+
+        </div>
+    </div>
+
+
+    <script>
+        fetch('../sounds_h.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML("beforeend", data);
+            });
+    </script>
+
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'Introduzione.html');" target="content-frame">
+            Indietro
+        </button>
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'r2.html');" target="content-frame">
+            Avanti
+        </button>
+    </div>
+
+    <script src="../playAudio.js"></script>
+    
+</body>
+</html>

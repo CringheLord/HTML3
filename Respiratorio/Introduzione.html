@@ -3,93 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../slide_Dim.css">
-    <link rel="stylesheet" href="styleResp.css">
-    <title>Apparato Respiratorio</title>
+    <title>Introduzione</title>
     <style>
         body {
-            font-family: Urbanist, sans-serif;
-            background-image: url(Introduzione.png);
-            background-repeat: repeat;
-            background-position: center;
-            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('sr_introduzione.png') no-repeat center center fixed;
             background-size: cover;
-            background-size: 75%;
-        }
-        #slide_container {
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            align-items: center;
+            justify-content: flex-start;
         }
-        #title {
-            font-size: 3.4rem;
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .buttons {
+            position: fixed;
+            bottom: 25px;
+            right: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: end;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1rem;
             font-weight: bold;
-            color: rgb(32, 56, 100);
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            top: 20px;
-            right: 20px;
-            padding: 5%;
-            transform: translate(0%, 0%);
-        }
-        #text {
-
             color: white;
-            padding: 10%;
-            border-radius: 10px;
-            width: 60vw;
-            transform: translate(-17%, -10%);
-            
+            background-color: #900000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
         }
-        #text p{
-            background-color: rgba(240, 248, 255, 0.452);
-            border-radius: 10%;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-align: center; 
-            padding: 3%;           
+        .button:hover {
+            background-color: #b00000;
+            transform: scale(1.05);
         }
-
     </style>
 </head>
 <body>
+    <div class="container">
 
-    
-    <script>
-        fetch('../sounds_h.html')
-            .then(response => response.text())
-            .then(data => {
-                document.body.insertAdjacentHTML("beforeend", data);
-            });
-    </script>
+        <script>
+            fetch('../sounds_h.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML("beforeend", data);
+                });
+        </script>
 
-    <div id="slide_container" class="slide_container_Dim">
-        <div id="title">
-            Apparato Respiratorio
+
+        <!-- Navigation Buttons -->
+        <div class="buttons">
+            <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'r1.html');" target="content-frame">
+                Avanti
+            </button>
         </div>
-        <div id="text">
-            <p>
-                L'apparato respiratorio è responsabile dello scambio di ossigeno e anidride carbonica, 
-                garantendo la corretta ossigenazione del sangue e il mantenimento dell'omeostasi.
-            </p>
-        </div>
-    </div>
 
-    <script>
-        fetch('../sounds_h.html')
-            .then(response => response.text())
-            .then(data => {
-                document.body.insertAdjacentHTML("beforeend", data);
-            });
-    </script>
-
-    <!-- Navigation Buttons -->
-    <div class="buttons">
-        <button class="button" style="visibility: hidden;" target="content-frame">
-            Indietro
-        </button>
-        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'slide_2.html');" target="content-frame">
-            Avanti
-        </button>
     </div>
 
     <script src="../playAudio.js"></script>

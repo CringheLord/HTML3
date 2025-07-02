@@ -15,11 +15,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
         }
         .content{
             text-align: start;
-            padding: 20px 20px 50px 20px;
+            padding: 20px 20px 0px 20px;
             flex-direction: row;
             display: flex;
             color: black;
@@ -31,7 +31,7 @@
             display: flex;
 
             justify-content: center;
-            /*margin-top: 50px;*/
+            margin-top: 50px;
             margin-bottom: 10px;
             align-items: center;
             flex: 50%;
@@ -96,18 +96,30 @@
     <div class="content">
         <div class="text">
             <p>
-                A destra passa solo sangue ricco di anidride carbonica, 
-                riceve dalle <b style="color: red">vene cave</b> il sangue povero di ossigeno che dovrà andare ad ossigenarsi nei polmoni,
-                a sinistra solo sangue ricco di ossigeno, che proviene dai polmoni attraverso le <b style="color: red">vene polmonari</b> e verrà distribuito a tutte le cellule.
+                Organo fondamentale che fa circolare il sangue nei vasi. Esso scorre in due direzioni diverse e cioè dal cuore alla periferia nelle
+                arterie e dal cuore alla periferia nelle vene.
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                Il cuore è diviso in due parti, destra e sinistra che non possono comunicare fra loro.
+                A destra circola solo sangue venoso ricco di anidride carbonica, a sinistra invece circola sangue arterioso ricco di ossigeno.
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+                Il cuore dopo che ha ricevuto <u>il sangue</u> da tutto il corpo, per poter spingere il sangue nelle arterie,
+                si deve contrarre continuamente in modo ritmico, senza il bisogno di essere stimolato dalla nostra volontà.
 
             </p>
             <br>
             <br>
             <br>
-            <br>
             <p>
-                Ciascuna metà a sua volta è divisa in due parti: una superiore, detta <b style="color: red">atrio</b> e una inferiore, detta <b style="color: red">ventricolo</b>.
-                La parte superiore comunica con quella inferiore attraverso delle valvole che permettono al sangue di andare solo dall'atrio al ventricolo e non viceversa.
+                Questo processo si chiama <b style="color: blue">ciclo cardiaco</b> e consiste di due fasi e da una brevissima pausa. 
+                Le due fasi si chiamano <b style="color: blue">diastole</b> (dilatazione) e <b style="color: blue">sistole</b> (contrazione).
             </p>
         </div>
         <br>
@@ -128,15 +140,16 @@
 
     <!-- Navigation Buttons -->
     <div class="buttons">
-        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'cuore.html');" target="content-frame">
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'vasi_sanguigni.html');" target="content-frame">
             Indietro
         </button>
-        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'fine.html');" target="content-frame">
+        <button class="button" onclick="playSoundAndNavigate('SoundSlideButt', 'cuore_2.html');" target="content-frame">
             Avanti
         </button>
     </div>
 
     <script src="../playAudio.js"></script>
-    
+
+
 </body>
 </html>
