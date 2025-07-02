@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Launcher</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f0f0f0;
+        margin: 0;
+      }
+
+      button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        font-family: sans-serif;
+        color: #fff;
+        background: #0078d7;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s, transform 0.2s;
+      }
+
+      button:hover {
+        background: #005fa3;
+        transform: scale(1.05);
+      }
+
+      button:active {
+        background: #004c82;
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="openApp()">Apri Applicazione</button>
+
+    <script>
+      function openApp() {
+        window.open(
+          "index.html",
+          "_blank",
+          "toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes," +
+            "width=" +
+            screen.availWidth +
+            ",height=" +
+            screen.availHeight +
+            ",left=0,top=0"
+        );
+      }
+    </script>
+  </body>
+</html>
