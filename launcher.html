@@ -6,11 +6,17 @@
     <style>
       body {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background: #f0f0f0;
+        background-color: #86b2ec;
+        background-image: url("logo.png"); /* path to your image */
+        background-size: cover; /* makes the image cover the whole page */
+        background-position: center;
+        background-repeat: no-repeat;
         margin: 0;
+        gap: 20px;
       }
 
       button {
@@ -39,6 +45,7 @@
   </head>
   <body>
     <button onclick="openApp()">Apri Applicazione</button>
+    <button onclick="chiudiApp()">ESCI</button>
 
     <script>
       function openApp() {
@@ -52,6 +59,11 @@
             screen.availHeight +
             ",left=0,top=0"
         );
+      }
+
+      function chiudiApp() {
+        window.open("", "_self", "");
+        window.close();
       }
     </script>
   </body>
